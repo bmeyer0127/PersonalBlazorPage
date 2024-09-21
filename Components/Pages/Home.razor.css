@@ -1,4 +1,6 @@
-﻿
+﻿/*Home.razor.css*/
+
 .name-block {
     background-color: #B9B4C7;
+    border-radius: 5px;
 }
