@@ -1,6 +1,25 @@
 ﻿/*Home.razor.css*/
 
-.name-block {
+.intro-message-greeting {
     background-color: #B9B4C7;
-    border-radius: 5px;
+    border-radius: 5px 5px 5px 0px;
 }
+
+.intro-message-name {
+    background-color: #B9B4C7;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.intro-message-corner {
+    background-color: #B9B4C7;
+    height: 20px;
+    width: 20px;
+    border-radius: 0 0 200% 0;
+}
+
+/*.intro-message-name:after {
+    content: 'ahoy';
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}*/
