@@ -1,21 +1,29 @@
 ﻿/*Home.razor.css*/
 
-.intro-message-greeting {
-    background-color: #B9B4C7;
+section {
+    padding-block: 3rem;
+}
+
+.name-header {
+    background-color: #697565;
+}
+
+/*.intro-message-greeting {
+    background-color: #697565;
     border-radius: 5px 5px 5px 0px;
 }
 
 .intro-message-name {
-    background-color: #B9B4C7;
+    background-color: #697565;
     border-radius: 0px 0px 5px 5px;
 }
 
 .intro-message-corner {
-    background-color: #B9B4C7;
+    background-color: #697565;
     height: 20px;
     width: 20px;
     border-radius: 0 0 200% 0;
-}
+}*/
 
 /*.intro-message-name:after {
     content: 'ahoy';

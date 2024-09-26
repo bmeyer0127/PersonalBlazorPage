@@ -6,6 +6,12 @@ https://colorhunt.co/palette/352f445c5470b9b4c7faf0e6
     mid-ground: #5C5470
     foreground: #B9B4C7
     text:       #FAF0E6
+    OR
+    background: #FAEED1
+    mid-ground: #DED0B6
+    foreground: #B9B4C7
+    text:       #607274
+
 */
 
 article {
@@ -13,8 +19,8 @@ article {
 }
 
 html, body {
-    background-color: #352F44 !important;
-    color: #FAF0E6;
+    background-color: #ECDFCC !important;
+    color: #1E201E;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
