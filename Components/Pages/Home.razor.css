@@ -1,33 +1,28 @@
-﻿/*Home.razor.css*/
-
+/*Home.razor.css*/
 section {
-    padding-block: 3rem;
+  padding-block: 2rem;
 }
 
 .name-header {
-    background-color: #697565;
+  isolation: isolate;
+  position: relative;
 }
 
-/*.intro-message-greeting {
-    background-color: #697565;
-    border-radius: 5px 5px 5px 0px;
+.name-header::after {
+  content: "";
+  background: #697565;
+  inset: 0;
+  height: 15rem;
+  position: absolute;
+  transform: skewY(-20deg);
+  transform-origin: bottom left;
+  z-index: -1;
 }
 
-.intro-message-name {
-    background-color: #697565;
-    border-radius: 0px 0px 5px 5px;
+@media (max-width: 767.98px) {
+  .name-header::after {
+    height: 12rem;
+  }
 }
 
-.intro-message-corner {
-    background-color: #697565;
-    height: 20px;
-    width: 20px;
-    border-radius: 0 0 200% 0;
-}*/
-
-/*.intro-message-name:after {
-    content: 'ahoy';
-    background-color: black;
-    height: 100%;
-    width: 100%;
-}*/
+/*# sourceMappingURL=Home.razor.css.map */
