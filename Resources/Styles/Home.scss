@@ -20,6 +20,10 @@ section {
     position: absolute;
     transform: skewY(-20deg);
     transform-origin: bottom left;
+    -webkit-mask-image: url('/Assets/Curve.svg');
+    -webkit-mask-repeat: repeat;
+    //height: 25px;
+    //width: 100%;
     z-index: -1;
 }
 
