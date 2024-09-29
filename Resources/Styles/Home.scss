@@ -3,39 +3,3 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
-section {
-    padding-block: 2rem;
-}
-
-.name-header {
-    isolation: isolate;
-    position: relative;
-}
-
-.intro-message-background {
-    height: 15rem;
-    width: 100%;
-    inset: 0;
-    background-color: #697565;
-    position: absolute;
-    transform: skewY(-25deg);
-    transform-origin: bottom left;
-    z-index: -1;
-}
-
-.intro-message-background::after {
-    content: "";
-    height: 1rem;
-    width: 100%;
-    background: #ECDFCC;
-    bottom: -1px;
-    position: absolute;
-    transform: rotate(180deg);
-    -webkit-mask-image: url("/Assets/Curve.svg");
-}
-
-@media (max-width: 767.98px) {
-    .intro-message-background {
-        height: 12rem;
-    }
-}
