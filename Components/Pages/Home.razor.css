@@ -1,4 +1,8 @@
-/*Home.razor.css*/
+/*Home.razor.scss*/
+variables {
+  --background-color: #ECDFCC;
+}
+
 section {
   padding-block: 2rem;
 }
@@ -6,29 +10,28 @@ section {
 .name-header {
   isolation: isolate;
   position: relative;
-
 }
 
 .intro-message-background {
-    height: 15rem;
-    width: 100%;
-    inset: 0;
-    background-color: #697565;
-    position: absolute;
-    transform: skewY(-25deg);
-    transform-origin: bottom left;
-    z-index: -1;
+  height: 15rem;
+  width: 100%;
+  inset: 0;
+  background-color: #697565;
+  position: absolute;
+  transform: skewY(-25deg);
+  transform-origin: bottom left;
+  z-index: -1;
 }
 
 .intro-message-background::after {
-    content: "";
-    height: 1rem;
-    width: 100%;
-    background: #ECDFCC;
-    bottom: -1px;
-    position: absolute;
-    transform: rotate(180deg);
-    -webkit-mask-image: url("/Assets/Curve.svg");
+  content: "";
+  height: 1rem;
+  width: 100%;
+  background: #ECDFCC;
+  bottom: -1px;
+  position: absolute;
+  transform: rotate(180deg);
+  -webkit-mask-image: url("/Assets/Curve.svg");
 }
 
 @media (max-width: 767.98px) {
