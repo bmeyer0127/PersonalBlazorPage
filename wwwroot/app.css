@@ -31,14 +31,14 @@ section {
 
 .intro-message-background::after {
   content: "";
-  height: 25px;
-  width: 200%;
+  height: 1.5rem;
+  width: 500%;
   background: #ECDFCC;
   bottom: -1px;
   position: absolute;
-  transform: rotate(180deg);
-  -webkit-mask-image: url("/Assets/InverseSingleWave.svg");
-  animation: wave linear 5s infinite;
+  transform-origin: center;
+  -webkit-mask-image: url("/Assets/InverseWaveHalf.svg");
+  animation: wave linear 20s infinite;
 }
 
 @keyframes wave {
@@ -46,7 +46,7 @@ section {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-40%);
   }
 }
 @media (max-width: 767.98px) {
@@ -54,8 +54,20 @@ section {
     height: 13rem;
   }
   .intro-message-background::after {
-    animation: wave linear 5s infinite;
+    animation: wave linear 10s infinite;
   }
+}
+.animation-grid-container {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  top: 0;
+  border: solid 2px red;
+}
+
+.animation-grid-long-rectangle {
+  height: 25px;
+  width: 25px;
 }
 
 /*# sourceMappingURL=app.css.map */
