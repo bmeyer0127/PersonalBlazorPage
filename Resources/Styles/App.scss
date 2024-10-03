@@ -1,26 +1,10 @@
 ﻿/*app.scss*/
 
-// Variables
+@import 'variables';
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
-// Variables
-//
-// Colors: 
-$page-background-color: #ECDFCC;
-$primary-font-color: #1E201E;
-$intro-message-green: #697565;
-//
-// Fonts: 
-$primary-font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$learning-font-stack: "Edu AU VIC WA NT Guides", cursive;
-//
-// Misc
-$wave-height: 1.5rem;
-$intro-skew: skewY(-25deg);
-//
-//
 
 
 html, body {
@@ -89,16 +73,31 @@ section {
 }
 
 // Animation grid
+@keyframes unrotate {
+    0% {
+        transform: rotate(-25deg);
+    }
+    100% {
+        transform: rotate(0deg);
 
-.animation-grid-container {
-    position: relative;
-    height: 50px;
-    width: 100%;
-    top: 0;
-    border: solid 2px red;
+    }
 }
 
-.animation-grid-long-rectangle {
-    height: 25px;
-    width: 25px;
+.animation-grid-container {
+    border: solid 2px red;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+@include media-breakpoint-up(md) {
+    .animation-grid-container {
+        margin-top: 3rem;
+    }
+}
+
+.ag-long-rectangle {
+    height: auto;
+    width: 20rem;
+    animation: unrotate linear 5s;
+    transform-origin: bottom left;
 }
