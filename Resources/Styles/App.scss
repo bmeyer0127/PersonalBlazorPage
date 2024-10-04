@@ -1,11 +1,7 @@
-﻿/*app.scss*/
-
-@import 'variables';
+﻿@import 'variables';
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
-
-
 
 html, body {
     background-color: $page-background-color;
@@ -15,89 +11,4 @@ html, body {
 
 article {
     padding: 0;
-}
-
-section {
-    padding-block: 2rem;
-}
-
-
-// Intro/Name Styles and Animation
-
-.name-header {
-    isolation: isolate;
-    position: relative;
-}
-
-.intro-message-background {
-    height: 15rem;
-    width: 100%;
-    inset: 0;
-    background-color: $intro-message-green;
-    position: absolute;
-    transform: $intro-skew;
-    transform-origin: bottom left;
-    z-index: -1;
-}
-
-.intro-message-background::after {
-    content: "";
-    height: $wave-height;
-    width: 500%;
-    background: $page-background-color;
-    bottom: -1px;
-    position: absolute;
-    transform-origin: center;
-    -webkit-mask-image: url("/Assets/InverseWaveHalf.svg");
-    animation: wave linear 20s infinite;
-}
-
-@keyframes wave {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-40%);
-    }
-}
-
-@include media-breakpoint-down(md) {
-    .intro-message-background {
-        height: 13rem;
-    }
-
-    .intro-message-background::after {
-        animation: wave linear 10s infinite;
-    }
-}
-
-// Animation grid
-@keyframes unrotate {
-    0% {
-        transform: rotate(-25deg);
-    }
-    100% {
-        transform: rotate(0deg);
-
-    }
-}
-
-.animation-grid-container {
-    border: solid 2px red;
-    margin-top: 2rem;
-    padding: 1rem;
-}
-
-@include media-breakpoint-up(md) {
-    .animation-grid-container {
-        margin-top: 3rem;
-    }
-}
-
-.ag-long-rectangle {
-    height: auto;
-    width: 20rem;
-    animation: unrotate linear 5s;
-    transform-origin: bottom left;
 }

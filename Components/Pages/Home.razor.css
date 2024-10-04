@@ -1,3 +1,10 @@
-/*Home.razor.scss*/
+section {
+  padding-block: 2rem;
+}
+
+.name-header {
+  isolation: isolate;
+  position: relative;
+}
 
 /*# sourceMappingURL=Home.razor.css.map */

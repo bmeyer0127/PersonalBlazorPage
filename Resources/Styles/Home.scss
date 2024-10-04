@@ -1,5 +1,13 @@
-﻿/*Home.razor.scss*/
+﻿@import '_variables';
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
+section {
+    padding-block: 2rem;
+}
+
+.name-header {
+    isolation: isolate;
+    position: relative;
+}
