@@ -1,1 +1,12 @@
-﻿
+﻿#CURRENT TASK############################################################################################################
+
+
+#TODO####################################################################################################################
+
+- Consider centering the name corner in the screen and giving options to:
+	- Travel upward into "space"
+		- This will give all of my professional qualifications
+	- Travel downward into "the earth"
+		- This will give all of my personal qualifications
+
+#FINISHED################################################################################################################
