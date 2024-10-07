@@ -13,7 +13,7 @@ section {
   bottom: 0;
   display: inline-block;
   position: absolute;
-  height: 50px;
+  height: 1rem;
   width: 100%;
 }
 
@@ -32,7 +32,7 @@ section {
   content: "";
   background: linear-gradient(#FFDA78, #A5B68D);
   display: inline-block;
-  height: 50px;
+  height: 1rem;
   position: absolute;
   top: 0;
   width: 100%;

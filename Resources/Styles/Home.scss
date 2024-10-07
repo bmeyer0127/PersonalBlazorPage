@@ -6,6 +6,7 @@
 $space-background: #1E3E62;
 $sky-background: #FFDA78;
 $earth-background: #A5B68D;
+$background-gradient-size: 1rem;
 
 section {
     padding-block: 5rem;
@@ -22,7 +23,7 @@ section {
     bottom: 0;
     display: inline-block;
     position: absolute;
-    height: 50px;
+    height: $background-gradient-size;
     width: 100%;
 }
 
@@ -41,7 +42,7 @@ section {
     content: "";
     background: linear-gradient($sky-background, $earth-background);
     display: inline-block;
-    height: 50px;
+    height: $background-gradient-size;
     position: absolute;
     top: 0;
     width: 100%;

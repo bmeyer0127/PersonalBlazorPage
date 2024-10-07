@@ -1,22 +1,31 @@
 ﻿#CURRENT TASK############################################################################################################
 
-- Separate home page into three sections:
-	- Top: space looking aesthetic but not too stupid looking
-		- Option to click on "space" to see professional qualifications
-	- Center: name section maybe with a sky aesthetic
-		- Will probably add some cute easter eggs a-la Stardew Valley
-	- Bottom: earthy aesthetic
-		- Option to click on "earth" to see personal qualities
+- Get better and more equal spacing for these
+	- For this maybe use separate div, but empty div feels weird
+	- Maybe want to keep using psudo elements, but not super sure
+	- Could also be a situation where I want to use display: flex but I need to get better that using that
 
-- Top needs a after psudo element to create a gradient between space and sky
-- Bottom needs a before psudo element to create a gradient between sky and earth
+- God I hate using CSS. Find more tools or games to get better with it. I hate it right now
+	- Like it's super cool but I feel like I am always chasing my own tail and reinventing the wheel
+	- So much functionality that I always forget about
 
 #TODO####################################################################################################################
 
-- Consider centering the name corner in the screen and giving options to:
-	- Travel upward into "space"
-		- This will give all of my professional qualifications
-	- Travel downward into "the earth"
-		- This will give all of my personal qualifications
+- Okay, first:
+	- I wanna find colors that mesh better together, that shouldn't be too big of a problem. Just play with some tools
+	- I want to get better at fucking with linear-gradient.
+		- Or find a different tool. I feel like it isn't working how I want it to
+		- Or does not have the functionality that I want it to have. 
 
 #FINISHED################################################################################################################
+
+# Separate home page into three sections:
+	# Top: space looking aesthetic but not too stupid looking
+		# Option to click on "space" to see professional qualifications
+	# Center: name section maybe with a sky aesthetic
+		# Will probably add some cute easter eggs a-la Stardew Valley
+	# Bottom: earthy aesthetic
+		# Option to click on "earth" to see personal qualities
+
+# Top needs a after psudo element to create a gradient between space and sky
+# Bottom needs a before psudo element to create a gradient between sky and earth
