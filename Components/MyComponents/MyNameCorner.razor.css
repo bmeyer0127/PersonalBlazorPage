@@ -9,7 +9,6 @@
 .intro-message-background {
   height: 15rem;
   width: 150%;
-  background-color: #697565;
   inset: 0;
   position: absolute;
   transform-origin: bottom left;
@@ -20,7 +19,6 @@
   content: "";
   height: 1.5rem;
   width: 150%;
-  background: #ECDFCC;
   bottom: -1px;
   position: absolute;
   transform-origin: center;

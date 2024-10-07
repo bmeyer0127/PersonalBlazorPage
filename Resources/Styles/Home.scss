@@ -3,11 +3,46 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
+$space-background: #1E3E62;
+$sky-background: #FFDA78;
+$earth-background: #A5B68D;
+
 section {
     padding-block: 5rem;
+}
+
+.professional-header {
+    background-color: $space-background;
+    position: relative;
+}
+
+.professional-header::after {
+    content: "";
+    background: linear-gradient($space-background, $sky-background);
+    bottom: 0;
+    display: inline-block;
+    position: absolute;
+    height: 50px;
+    width: 100%;
 }
 
 .name-header {
     isolation: isolate;
     position: relative;
+    background-color: $sky-background;
+}
+
+.personal-header {
+    background-color: $earth-background;
+    position: relative;
+}
+
+.personal-header::before {
+    content: "";
+    background: linear-gradient($sky-background, $earth-background);
+    display: inline-block;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }

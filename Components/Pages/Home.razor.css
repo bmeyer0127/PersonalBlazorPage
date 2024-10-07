@@ -1,10 +1,41 @@
 section {
-  padding-block: 2rem;
+  padding-block: 5rem;
+}
+
+.professional-header {
+  background-color: #1E3E62;
+  position: relative;
+}
+
+.professional-header::after {
+  content: "";
+  background: linear-gradient(#1E3E62, #FFDA78);
+  bottom: 0;
+  display: inline-block;
+  position: absolute;
+  height: 50px;
+  width: 100%;
 }
 
 .name-header {
   isolation: isolate;
   position: relative;
+  background-color: #FFDA78;
+}
+
+.personal-header {
+  background-color: #A5B68D;
+  position: relative;
+}
+
+.personal-header::before {
+  content: "";
+  background: linear-gradient(#FFDA78, #A5B68D);
+  display: inline-block;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 /*# sourceMappingURL=Home.razor.css.map */

@@ -1,5 +1,15 @@
 ﻿#CURRENT TASK############################################################################################################
 
+- Separate home page into three sections:
+	- Top: space looking aesthetic but not too stupid looking
+		- Option to click on "space" to see professional qualifications
+	- Center: name section maybe with a sky aesthetic
+		- Will probably add some cute easter eggs a-la Stardew Valley
+	- Bottom: earthy aesthetic
+		- Option to click on "earth" to see personal qualities
+
+- Top needs a after psudo element to create a gradient between space and sky
+- Bottom needs a before psudo element to create a gradient between sky and earth
 
 #TODO####################################################################################################################
 
