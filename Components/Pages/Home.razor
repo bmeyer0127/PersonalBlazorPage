@@ -1,23 +1,29 @@
 ﻿@page "/"
 @namespace Home
-@using MyNameCorner
+@using IntroName
 @using IntroAnimationGrid
 @using Microsoft.AspNetCore.Mvc.TagHelpers
 
 
 <PageTitle>Ahoy</PageTitle>
+<div class="intro-container">
+    <div class="professional-header">
+        <h2 class="intro-header">Professional stuff</h2>
+    </div>
 
-<section class="professional-header">
-    <h2 class="">Professional stuff</h2>
-</section>
+    <div class="professional-name-gap" />
 
-<section class="name-header">
-    <MyNameCorner />
-</section>
+    <div class="name-header">
+        <h2 class="intro-header">hey friend,</h2>
+        <h2 class="intro-header">I'm Brett</h2>
+    </div>
 
-<section class="personal-header">
-    <h2>Personal stuff</h2>
-</section>
+    <div class="name-personal-gap" />
+
+    <div class="personal-header">
+        <h2 class="intro-header">Personal stuff</h2>
+    </div>
+</div>
 
 
 

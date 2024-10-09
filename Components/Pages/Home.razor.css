@@ -1,41 +1,47 @@
-section {
-  padding-block: 5rem;
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+
+.intro-container div {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.professional-header,
+.name-header,
+.personal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-header {
+  text-align: center;
+  display: inline-block;
 }
 
 .professional-header {
-  background-color: #1E3E62;
-  position: relative;
+  background-color: #124076;
 }
 
-.professional-header::after {
-  content: "";
-  background: linear-gradient(#1E3E62, #FFDA78);
-  bottom: 0;
-  display: inline-block;
-  position: absolute;
-  height: 1rem;
-  width: 100%;
+.professional-name-gap {
+  background: linear-gradient(#124076, #B5CFB7);
 }
 
 .name-header {
-  isolation: isolate;
-  position: relative;
-  background-color: #FFDA78;
+  background-color: #B5CFB7;
+}
+
+.name-personal-gap {
+  background: linear-gradient(#B5CFB7, #C0C78C);
 }
 
 .personal-header {
-  background-color: #A5B68D;
-  position: relative;
-}
-
-.personal-header::before {
-  content: "";
-  background: linear-gradient(#FFDA78, #A5B68D);
-  display: inline-block;
-  height: 1rem;
-  position: absolute;
-  top: 0;
-  width: 100%;
+  background-color: #C0C78C;
 }
 
 /*# sourceMappingURL=Home.razor.css.map */

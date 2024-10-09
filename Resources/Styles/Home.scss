@@ -3,47 +3,51 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
-$space-background: #1E3E62;
-$sky-background: #FFDA78;
-$earth-background: #A5B68D;
-$background-gradient-size: 1rem;
 
-section {
-    padding-block: 5rem;
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+}
+
+.intro-container div {
+    flex-grow: 1;
+    //flex-shrink: 1;
+    flex-basis: 0;
+}
+
+.professional-header,
+.name-header,
+.personal-header {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.intro-header {
+    text-align: center;
 }
 
 .professional-header {
     background-color: $space-background;
-    position: relative;
 }
 
-.professional-header::after {
-    content: "";
+.professional-name-gap {
     background: linear-gradient($space-background, $sky-background);
-    bottom: 0;
-    display: inline-block;
-    position: absolute;
-    height: $background-gradient-size;
-    width: 100%;
 }
 
 .name-header {
-    isolation: isolate;
-    position: relative;
     background-color: $sky-background;
+}
+
+.name-personal-gap {
+    background: linear-gradient($sky-background, $earth-background);
 }
 
 .personal-header {
     background-color: $earth-background;
-    position: relative;
 }
 
-.personal-header::before {
-    content: "";
-    background: linear-gradient($sky-background, $earth-background);
-    display: inline-block;
-    height: $background-gradient-size;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}

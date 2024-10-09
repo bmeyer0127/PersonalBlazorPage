@@ -1,7 +1,8 @@
 html, body {
   background-color: #ECDFCC;
-  color: #2E2836;
+  color: black;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: hidden;
 }
 
 article {
