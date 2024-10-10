@@ -14,14 +14,13 @@
 .professional-header,
 .name-header,
 .personal-header {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
 }
 
 .intro-header {
   text-align: center;
-  display: inline-block;
 }
 
 .professional-header {
@@ -34,14 +33,30 @@
 
 .name-header {
   background-color: #B5CFB7;
+  position: relative;
 }
 
 .name-personal-gap {
-  background: linear-gradient(#B5CFB7, #C0C78C);
+  background: linear-gradient(#B5CFB7, #626F47);
+  position: relative;
 }
 
 .personal-header {
-  background-color: #C0C78C;
+  background-color: #626F47;
+  position: relative;
+  height: 100%;
+}
+
+.personal-header::before {
+  background-color: #626F47;
+  content: "";
+  -webkit-mask-image: url("Assets/HorizonCurve.svg");
+  -webkit-mask-repeat: no-repeat;
+  position: absolute;
+  height: 59px;
+  width: 100%;
+  bottom: 100%;
+  display: block;
 }
 
 /*# sourceMappingURL=Home.razor.css.map */

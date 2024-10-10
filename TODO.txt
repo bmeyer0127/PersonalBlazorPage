@@ -1,11 +1,24 @@
 ﻿#CURRENT TASK############################################################################################################
 
-- Add flexbox to home intro section
+- Take off the earth-sky gradient. 
+- Replace with a curved divide.
+- Remove name-personal-gap.
+- Add either an after to name or before to personal.
+- Add a curved svg to the psudo element
 
 #TODO####################################################################################################################
 
+- Would like to finalize the basic color scheme for intro
+	- Or at least find a comfy and close enough place holder
+	- Sky and space might be fine right now. 
+	- Need to find a better color for earth. 
+		- Also will not be using a gradient.
+		- I think I want it to be a curved divide. 
+		- Will have some SVGs to make it look like a horizon.
 
 #FINISHED################################################################################################################
+
+# Add flexbox to home intro section
 
 # Separate home page into three sections:
 	# Top: space looking aesthetic but not too stupid looking

@@ -41,13 +41,60 @@
 
 .name-header {
     background-color: $sky-background;
+    position: relative;
 }
+
+//.name-header::after {
+//    background-color: black;
+//    content: '';
+//    -webkit-mask-image: url("/Assets/HorizonCurve.svg");
+//    -webkit-mask-repeat: no-repeat;
+//    position: absolute;
+//    height: 100%;
+//    width: 100%;
+    //bottom: 100%;
+//    top: 69%;
+//    display: block;
+//}
 
 .name-personal-gap {
     background: linear-gradient($sky-background, $earth-background);
+    position: relative;
 }
 
 .personal-header {
     background-color: $earth-background;
+    position: relative;
+    //overflow: hidden;
+    height: 100%
 }
 
+.personal-header::before {
+    background-color: $earth-background;
+    content: '';
+    -webkit-mask-image: url("Assets/HorizonCurve.svg");
+    -webkit-mask-repeat: no-repeat;
+    position: absolute;
+    height: 59px;
+    width: 100%;
+    bottom: 100%;
+    display: block; 
+}
+
+//@include media-breakpoint-down(lg) {
+//    .personal-header::before {
+//        bottom: 30%;
+//    }
+//}
+
+//@include media-breakpoint-down(md) {
+//    .personal-header::before {
+//        bottom: 20%;
+//    }
+//}
+
+//@include media-breakpoint-down(sm) {
+//    .personal-header::before {
+//        bottom: 10%;
+//    }
+//}
