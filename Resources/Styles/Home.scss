@@ -29,6 +29,7 @@
 
 .intro-header {
     text-align: center;
+    z-index: 1;
 }
 
 .professional-header {
@@ -58,43 +59,55 @@
 //}
 
 .name-personal-gap {
-    background: linear-gradient($sky-background, $earth-background);
+    background: linear-gradient($sky-background, $lower-sky-background);
     position: relative;
 }
 
+//.name-personal-gap::after {
+//    background-color: $earth-background;
+//    content: '';
+//    -webkit-mask-image: url("Assets/HorizonCurve.svg");
+//    -webkit-mask-repeat: no-repeat;
+//    position: absolute;
+//    height: 100%;
+//    width: 100%;
+//    bottom: 0;
+//    display: block;
+//}
+
 .personal-header {
-    background-color: $earth-background;
+    background: $earth-gradient;
     position: relative;
     //overflow: hidden;
-    height: 100%
+    height: 100%;
 }
 
 .personal-header::before {
-    background-color: $earth-background;
+    background: $earth-gradient;
     content: '';
     -webkit-mask-image: url("Assets/HorizonCurve.svg");
     -webkit-mask-repeat: no-repeat;
     position: absolute;
-    height: 59px;
-    width: 100%;
-    bottom: 100%;
-    display: block; 
+    height: 200%;
+    width: 200%;
+    top: -50%;
+    display: inline-block; 
 }
 
-//@include media-breakpoint-down(lg) {
-//    .personal-header::before {
-//        bottom: 30%;
-//    }
-//}
+@include media-breakpoint-down(lg) {
+    .personal-header::before {
+        top: -30%;
+    }
+}
 
-//@include media-breakpoint-down(md) {
-//    .personal-header::before {
-//        bottom: 20%;
-//    }
-//}
+@include media-breakpoint-down(md) {
+    .personal-header::before {
+        top: -20%;
+    }
+}
 
-//@include media-breakpoint-down(sm) {
-//    .personal-header::before {
-//        bottom: 10%;
-//    }
-//}
+@include media-breakpoint-down(sm) {
+    .personal-header::before {
+        top: -10%;
+    }
+}

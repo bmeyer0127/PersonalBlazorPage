@@ -1,22 +1,30 @@
 ﻿#CURRENT TASK############################################################################################################
+ 
 
-- Take off the earth-sky gradient. 
-- Replace with a curved divide.
-- Remove name-personal-gap.
-- Add either an after to name or before to personal.
-- Add a curved svg to the psudo element
 
 #TODO####################################################################################################################
 
-- Would like to finalize the basic color scheme for intro
-	- Or at least find a comfy and close enough place holder
-	- Sky and space might be fine right now. 
-	- Need to find a better color for earth. 
-		- Also will not be using a gradient.
-		- I think I want it to be a curved divide. 
-		- Will have some SVGs to make it look like a horizon.
+- Add a flourish to my name
+
+- Add animations to the tags.
+- Make it feel awake and alive. 
+- Add bouncing icons to display the ability to interact with the page.
+- Add some twinkling stars to the space section.
+
+- Transition to space(professional) will zoom out to show orbitting earth
+- Transition to earth(personal) will either:
+	- Dive into earth to show subterranian layers OR
+	- Zoom into earth to show maybe a forest or something.
 
 #FINISHED################################################################################################################
+
+# Would like to finalize the basic color scheme for intro
+	# Or at least find a comfy and close enough place holder
+	# Need to find a better color for earth. 
+		# I think I want it to be a curved divide. 
+		# Will have some SVGs to make it look like a horizon.
+
+# Add a curved svg to the psudo element
 
 # Add flexbox to home intro section
 

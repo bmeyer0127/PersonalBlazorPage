@@ -21,6 +21,7 @@
 
 .intro-header {
   text-align: center;
+  z-index: 1;
 }
 
 .professional-header {
@@ -37,26 +38,42 @@
 }
 
 .name-personal-gap {
-  background: linear-gradient(#B5CFB7, #626F47);
+  background: linear-gradient(#B5CFB7, #FFD09B);
   position: relative;
 }
 
 .personal-header {
-  background-color: #626F47;
+  background: linear-gradient(#968a1e, #7d8d26, #727e00, #586700);
   position: relative;
   height: 100%;
 }
 
 .personal-header::before {
-  background-color: #626F47;
+  background: linear-gradient(#968a1e, #7d8d26, #727e00, #586700);
   content: "";
   -webkit-mask-image: url("Assets/HorizonCurve.svg");
   -webkit-mask-repeat: no-repeat;
   position: absolute;
-  height: 59px;
-  width: 100%;
-  bottom: 100%;
-  display: block;
+  height: 200%;
+  width: 200%;
+  top: -35%;
+  display: inline-block;
+}
+
+@media (max-width: 991.98px) {
+  .personal-header::before {
+    top: -30%;
+  }
+}
+@media (max-width: 767.98px) {
+  .personal-header::before {
+    top: -20%;
+  }
+}
+@media (max-width: 575.98px) {
+  .personal-header::before {
+    top: -10%;
+  }
 }
 
 /*# sourceMappingURL=Home.razor.css.map */
