@@ -28,6 +28,17 @@
   background-color: #124076;
 }
 
+.professional-header::after {
+  content: "";
+  -webkit-mask-image: url("Assets/ArrowUp.svg");
+  -webkit-mask-repeat: no-repeat;
+  background-color: white;
+  margin-left: 1rem;
+  height: 2rem;
+  width: 2rem;
+  animation: arrow-up-bounce 2s ease 0s infinite normal forwards;
+}
+
 .professional-name-gap {
   background: linear-gradient(#124076, #B5CFB7);
 }
@@ -78,11 +89,7 @@
 @keyframes arrow-up-bounce {
   0% {
     animation-timing-function: ease-in;
-    opacity: 1;
     transform: translateY(-25px);
-  }
-  24% {
-    opacity: 1;
   }
   40% {
     animation-timing-function: ease-in;
@@ -105,13 +112,9 @@
     transform: translateY(0px);
   }
   100% {
-    animation-timing-function: ease-out;
-    opacity: 1;
-    transform: translateY(0px);
+    animation-timing-function: ease-in;
+    transform: translateY(-25px);
   }
-}
-.arrow-up {
-  animation: arrow-up-bounce 1s ease 0s infinite normal forwards;
 }
 
 /*# sourceMappingURL=Home.razor.css.map */

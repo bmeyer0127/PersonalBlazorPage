@@ -34,6 +34,17 @@
     background-color: $space-background;
 }
 
+.professional-header::after {
+    content: '';
+    -webkit-mask-image: url("Assets/ArrowUp.svg");
+    -webkit-mask-repeat: no-repeat;
+    background-color: white;
+    margin-left: 1rem;
+    height: 2rem;
+    width: 2rem;
+    animation: arrow-up-bounce 2s ease 0s infinite normal forwards;
+}
+
 .professional-name-gap {
     background: linear-gradient($space-background, $sky-background);
 }
@@ -84,32 +95,41 @@
     }
 }
 
-//@keyframes arrow-up-bounce {
-    //0% {
-    //    transform: translateY(5px);
-    //}
+// Animations
 
-//    50% {
-//        transform: translateY(-15px)
+//@keyframes arrow-up-bounce {
+//    0% {
+//        animation-timing-function: ease-in;
+//        transform: translateY(-25px);
 //    }
 
-    //70% {
-    //    transform: translateY(0px)
-    //}
+//    40% {
+//        animation-timing-function: ease-in;
+//        transform: translateY(-24px);
+//    }
 
-    //75% {
-    //    transform: translateY(-3px);
-    //}
+//    65% {
+//        animation-timing-function: ease-in;
+//        transform: translateY(-12px);
+//    }
 
-//    80% {
+//    82% {
+//        animation-timing-function: ease-in;
+//        transform: translateY(-6px);
+//    }
+
+//    93% {
+//        animation-timing-function: ease-in;
+//        transform: translateY(-4px);
+//    }
+
+//    25%, 55%, 75%, 87% {
+//        animation-timing-function: ease-out;
 //        transform: translateY(0px);
 //    }
 
-//    90% {
-//        transform: translateY(-2px);
-//    }
-
 //    100% {
+//        animation-timing-function: ease-out;
 //        transform: translateY(0px);
 //    }
 //}
@@ -117,12 +137,7 @@
 @keyframes arrow-up-bounce {
     0% {
         animation-timing-function: ease-in;
-        opacity: 1;
         transform: translateY(-25px);
-    }
-
-    24% {
-        opacity: 1;
     }
 
     40% {
@@ -151,12 +166,7 @@
     }
 
     100% {
-        animation-timing-function: ease-out;
-        opacity: 1;
-        transform: translateY(0px);
+        animation-timing-function: ease-in;
+        transform: translateY(-25px);
     }
-}
-
-.arrow-up {
-    animation: arrow-up-bounce 1s ease 0s infinite normal forwards;
 }
