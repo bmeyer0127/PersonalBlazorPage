@@ -4,7 +4,6 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 
 
-
 .intro-container {
     display: flex;
     flex-direction: column;
@@ -15,7 +14,6 @@
 
 .intro-container div {
     flex-grow: 1;
-    //flex-shrink: 1;
     flex-basis: 0;
 }
 
@@ -45,40 +43,14 @@
     position: relative;
 }
 
-//.name-header::after {
-//    background-color: black;
-//    content: '';
-//    -webkit-mask-image: url("/Assets/HorizonCurve.svg");
-//    -webkit-mask-repeat: no-repeat;
-//    position: absolute;
-//    height: 100%;
-//    width: 100%;
-    //bottom: 100%;
-//    top: 69%;
-//    display: block;
-//}
-
 .name-personal-gap {
     background: linear-gradient($sky-background, $lower-sky-background);
     position: relative;
 }
 
-//.name-personal-gap::after {
-//    background-color: $earth-background;
-//    content: '';
-//    -webkit-mask-image: url("Assets/HorizonCurve.svg");
-//    -webkit-mask-repeat: no-repeat;
-//    position: absolute;
-//    height: 100%;
-//    width: 100%;
-//    bottom: 0;
-//    display: block;
-//}
-
 .personal-header {
     background: $earth-gradient;
     position: relative;
-    //overflow: hidden;
     height: 100%;
 }
 
@@ -110,4 +82,81 @@
     .personal-header::before {
         top: -10%;
     }
+}
+
+//@keyframes arrow-up-bounce {
+    //0% {
+    //    transform: translateY(5px);
+    //}
+
+//    50% {
+//        transform: translateY(-15px)
+//    }
+
+    //70% {
+    //    transform: translateY(0px)
+    //}
+
+    //75% {
+    //    transform: translateY(-3px);
+    //}
+
+//    80% {
+//        transform: translateY(0px);
+//    }
+
+//    90% {
+//        transform: translateY(-2px);
+//    }
+
+//    100% {
+//        transform: translateY(0px);
+//    }
+//}
+
+@keyframes arrow-up-bounce {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 1;
+        transform: translateY(-25px);
+    }
+
+    24% {
+        opacity: 1;
+    }
+
+    40% {
+        animation-timing-function: ease-in;
+        transform: translateY(-24px);
+    }
+
+    65% {
+        animation-timing-function: ease-in;
+        transform: translateY(-12px);
+    }
+
+    82% {
+        animation-timing-function: ease-in;
+        transform: translateY(-6px);
+    }
+
+    93% {
+        animation-timing-function: ease-in;
+        transform: translateY(-4px);
+    }
+
+    25%, 55%, 75%, 87% {
+        animation-timing-function: ease-out;
+        transform: translateY(0px);
+    }
+
+    100% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.arrow-up {
+    animation: arrow-up-bounce 1s ease 0s infinite normal forwards;
 }

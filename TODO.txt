@@ -1,6 +1,6 @@
 ﻿#CURRENT TASK############################################################################################################
  
-
+ - Add bouncing icons to display the ability to interact with the page.
 
 #TODO####################################################################################################################
 
@@ -8,7 +8,7 @@
 
 - Add animations to the tags.
 - Make it feel awake and alive. 
-- Add bouncing icons to display the ability to interact with the page.
+
 - Add some twinkling stars to the space section.
 
 - Transition to space(professional) will zoom out to show orbitting earth
