@@ -1,15 +1,12 @@
 ﻿#CURRENT TASK############################################################################################################
  
- - Add bouncing icons to display the ability to interact with the page.
+ - Add some twinkling stars to the space section.
 
 #TODO####################################################################################################################
 
 - Add a flourish to my name
 
-- Add animations to the tags.
 - Make it feel awake and alive. 
-
-- Add some twinkling stars to the space section.
 
 - Transition to space(professional) will zoom out to show orbitting earth
 - Transition to earth(personal) will either:
@@ -17,6 +14,8 @@
 	- Zoom into earth to show maybe a forest or something.
 
 #FINISHED################################################################################################################
+
+ # Add bouncing icons to display the ability to interact with the page.
 
 # Would like to finalize the basic color scheme for intro
 	# Or at least find a comfy and close enough place holder

@@ -3,23 +3,32 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
-
-.intro-container {
+.intro-background-container {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     height: 100vh;
     position: absolute;
     width: 100%;
 }
 
-.intro-container div {
+.intro-background-container div {
     flex-grow: 1;
     flex-basis: 0;
 }
 
-.professional-header,
-.name-header,
-.personal-header {
+.header-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.professional-background,
+.name-background,
+.personal-background {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -30,11 +39,11 @@
     z-index: 1;
 }
 
-.professional-header {
+.professional-background {
     background-color: $space-background;
 }
 
-.professional-header::after {
+.professional-background::after {
     content: '';
     -webkit-mask-image: url("Assets/ArrowUp.svg");
     -webkit-mask-repeat: no-repeat;
@@ -42,14 +51,21 @@
     margin-left: 1rem;
     height: 2rem;
     width: 2rem;
-    animation: arrow-up-bounce 2s ease 0s infinite normal forwards;
+    animation: arrow-down-bounce 1s ease 0s infinite normal forwards;
+}
+
+.stars {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
 }
 
 .professional-name-gap {
     background: linear-gradient($space-background, $sky-background);
 }
 
-.name-header {
+.name-background {
     background-color: $sky-background;
     position: relative;
 }
@@ -59,13 +75,25 @@
     position: relative;
 }
 
-.personal-header {
+.personal-background {
     background: $earth-gradient;
     position: relative;
     height: 100%;
 }
 
-.personal-header::before {
+.personal-background::after {
+    content: '';
+    -webkit-mask-image: url("Assets/ArrowDown.svg");
+    -webkit-mask-repeat: no-repeat;
+    transform: rotate(180deg);
+    background-color: white;
+    margin-left: 1rem;
+    height: 2rem;
+    width: 2rem;
+    animation: arrow-up-bounce 1s ease 0s infinite normal forwards;
+}
+
+.personal-background::before {
     background: $earth-gradient;
     content: '';
     -webkit-mask-image: url("Assets/HorizonCurve.svg");
@@ -97,76 +125,56 @@
 
 // Animations
 
-//@keyframes arrow-up-bounce {
-//    0% {
-//        animation-timing-function: ease-in;
-//        transform: translateY(-25px);
-//    }
-
-//    40% {
-//        animation-timing-function: ease-in;
-//        transform: translateY(-24px);
-//    }
-
-//    65% {
-//        animation-timing-function: ease-in;
-//        transform: translateY(-12px);
-//    }
-
-//    82% {
-//        animation-timing-function: ease-in;
-//        transform: translateY(-6px);
-//    }
-
-//    93% {
-//        animation-timing-function: ease-in;
-//        transform: translateY(-4px);
-//    }
-
-//    25%, 55%, 75%, 87% {
-//        animation-timing-function: ease-out;
-//        transform: translateY(0px);
-//    }
-
-//    100% {
-//        animation-timing-function: ease-out;
-//        transform: translateY(0px);
-//    }
-//}
-
 @keyframes arrow-up-bounce {
     0% {
         animation-timing-function: ease-in;
-        transform: translateY(-25px);
+        transform: translateY(-15px);
     }
 
-    40% {
+    25% {
+        animation-timing-function: ease-out;
+        transform: translateY(0px)
+    }
+
+    50% {
         animation-timing-function: ease-in;
-        transform: translateY(-24px);
+        transform: translateY(-15px);
     }
 
-    65% {
-        animation-timing-function: ease-in;
-        transform: translateY(-12px);
-    }
-
-    82% {
-        animation-timing-function: ease-in;
-        transform: translateY(-6px);
-    }
-
-    93% {
-        animation-timing-function: ease-in;
-        transform: translateY(-4px);
-    }
-
-    25%, 55%, 75%, 87% {
+    75% {
         animation-timing-function: ease-out;
         transform: translateY(0px);
     }
 
     100% {
+        animation-timing-function: ease-out;
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes arrow-down-bounce {
+    0% {
         animation-timing-function: ease-in;
-        transform: translateY(-25px);
+        transform: translateY(0px);
+    }
+
+    25% {
+        animation-timing-function: ease-out;
+        transform: translateY(-15px)
+    }
+
+    50% {
+        animation-timing-function: ease-in;
+        transform: translateY(0px);
+    }
+
+    75% {
+        animation-timing-function: ease-out;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        animation-timing-function: ease-out;
+        transform: translateY(0px);
     }
 }
