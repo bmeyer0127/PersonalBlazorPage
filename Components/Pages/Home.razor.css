@@ -21,6 +21,11 @@
   justify-content: space-around;
 }
 
+.intro-header {
+  text-align: center;
+  z-index: 1;
+}
+
 .professional-background,
 .name-background,
 .personal-background {
@@ -29,13 +34,9 @@
   justify-content: center;
 }
 
-.intro-header {
-  text-align: center;
-  z-index: 1;
-}
-
 .professional-background {
   background-color: #124076;
+  position: relative;
 }
 
 .professional-background::after {
@@ -49,11 +50,19 @@
   animation: arrow-down-bounce 1s ease 0s infinite normal forwards;
 }
 
-.stars {
+.star-container {
+  color: white;
   position: absolute;
-  display: flex;
   height: 100%;
   width: 100%;
+  display: flex;
+}
+
+.star-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
 }
 
 .professional-name-gap {
