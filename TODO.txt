@@ -1,11 +1,10 @@
 ﻿#CURRENT TASK############################################################################################################
- 
- # Add some twinkling stars to the space section.
-	- Add a fading animation
+
+- Work on the transition into space for professional stuff
+
+- Make birds look less horrible
 
 #TODO####################################################################################################################
-
-- Add birds in the sky
 
 - Maybe add some trees on the earth
 
@@ -19,6 +18,11 @@
 	- Zoom into earth to show maybe a forest or something.
 
 #FINISHED################################################################################################################
+
+ # Add some twinkling stars to the space section.
+	# Add a fading animation
+
+# Add birds in the sky
 
  # Add bouncing icons to display the ability to interact with the page.
 
