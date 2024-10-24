@@ -61,15 +61,12 @@
     height: 100%;
     width: 100%;
     display: flex;
-    //justify-content: space-between;
-    //flex-direction: row;
+    flex-direction: column;
 }
 
-.star-col {
+.star-row {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: space-between;
+    justify-content: space-around;
 }
 
 .professional-name-gap {

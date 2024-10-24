@@ -1,5 +1,6 @@
 ﻿@page "/"
 @namespace Home
+@rendermode InteractiveServer
 @using Star
 @using Microsoft.AspNetCore.Mvc.TagHelpers
 
@@ -9,11 +10,11 @@
 <div class="intro-background-container">
     <div class="professional-background">
         <div class="star-container">
-            @for(int i = 0; i < 20; i++)
+            @for(int i = 0; i < 10; i++)
             {
-                <div class="star-col">
+                <div class="star-row">
                     @for(int j = 0; j < 10; j++)
-                    {
+                    {               
                         <Star />
                     }
                 </div>
@@ -38,5 +39,31 @@
 
 @code
 {
+    // private static Random rand = new Random();
+
+    // private static int[] getVisibleStars()
+    // {
+    //     int newI = rand.Next(20);
+    //     int newJ = rand.Next(10);
+
+    //     return [newI, newJ];
+    // }
+
+    // int[] visibleStars = getVisibleStars();
+
+    // Make a 2D array to get multiple stars visible at the same time
+
+    // int[] starCoords = getVisibleStars();
+
+    // private string getStarStyles(int i, int j)
+    // {
+    //     Console.WriteLine($"{starCoords[0]}, {starCoords[1]}");
+
+    //     if (starCoords[0] == i && starCoords[1] == j)
+    //     {
+    //         return "opacity: 100%";
+    //     }
+    //     return "opacity: 0%";
+    // }
 
 }

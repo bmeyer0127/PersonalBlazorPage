@@ -1,8 +1,13 @@
 ﻿#CURRENT TASK############################################################################################################
  
- - Add some twinkling stars to the space section.
+ # Add some twinkling stars to the space section.
+	- Add a fading animation
 
 #TODO####################################################################################################################
+
+- Add birds in the sky
+
+- Maybe add some trees on the earth
 
 - Add a flourish to my name
 
