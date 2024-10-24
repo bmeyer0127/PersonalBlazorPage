@@ -4,5 +4,37 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 
 .star {
-    //position: absolute;
+    color: white;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade-in-and-out {
+    animation: fade-in 3s linear 0s infinite;
+}
+
+.invisible {
+    opacity: 0;
 }
