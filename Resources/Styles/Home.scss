@@ -3,6 +3,10 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
+//html {
+//    animation: launch 5s;
+//}
+
 .intro-background-container {
     display: flex;
     flex-direction: column;
@@ -85,7 +89,8 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    animation: bird-migration 10s infinite linear;
+    align-content: center;
+    //animation: bird-migration 10s infinite linear;
 }
 
 .bird-row {
@@ -115,15 +120,6 @@
     width: 2rem;
     animation: arrow-up-bounce 1s ease 0s infinite normal forwards;
 }
-
-//.personal-background-arc {
-//    color: $earth-gradient;
-//    position: absolute;
-//    height: 100%;
-//    width: 100%;
-//    bottom: 0;
-//    display: inline-block;
-//}
 
 .personal-background::before {
     background: $earth-gradient;
@@ -218,5 +214,14 @@
 
     100% {
         transform: translateX(100%);
+    }
+}
+
+@keyframes launch {
+    0% {
+        transform: translateY(0)
+    }
+    100% {
+        transform: translateY(100%);
     }
 }
