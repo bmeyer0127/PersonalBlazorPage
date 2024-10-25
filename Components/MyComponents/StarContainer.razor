@@ -1,0 +1,19 @@
+﻿@namespace StarContainer
+@rendermode InteractiveServer
+@using Star
+
+<div class="star-container">
+    @for (int i = 0; i < 20; i++)
+    {
+        <div class="star-row">
+            @for (int j = 0; j < 20; j++)
+            {
+                <Star />
+            }
+        </div>
+    }
+</div>
+
+@code {
+
+}

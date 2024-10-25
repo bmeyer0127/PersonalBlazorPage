@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../Resources/Styles/Star.scss"],"names":[],"mappings":"AAKA;EACI;;;AAGJ;EACI;IACI;;EAGJ;IACI;;EAGJ;IACI;;;AAIR;EACI;IACI;;EAGJ;IACI;;;AAIR;EACI;;;AAGJ;EACI","file":"Star.razor.css"}
+{"version":3,"sourceRoot":"","sources":["../../Resources/Styles/Star.scss"],"names":[],"mappings":"AAAA;EACI;;;AAGJ;EACI;IACI;;EAGJ;IACI;;EAGJ;IACI;;;AAIR;EACI;;;AAGJ;EACI","file":"Star.razor.css"}

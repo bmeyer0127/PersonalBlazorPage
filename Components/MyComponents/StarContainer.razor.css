@@ -1,0 +1,15 @@
+.star-container {
+  color: white;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.star-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*# sourceMappingURL=StarContainer.razor.css.map */

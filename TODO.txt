@@ -4,6 +4,8 @@
 
 - Make birds look less horrible
 
+- Think about creating a circle for the earth instead of just a section of one
+
 #TODO####################################################################################################################
 
 - Maybe add some trees on the earth
