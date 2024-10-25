@@ -1,8 +1,6 @@
 ﻿@page "/"
 @namespace Home
 @rendermode InteractiveServer
-@using Star
-@using Bird
 @using BirdContainer
 @using StarContainer
 @using Microsoft.AspNetCore.Mvc.TagHelpers
@@ -10,8 +8,7 @@
 
 <PageTitle>Ahoy</PageTitle>
 
-<div class="intro-background-container">
-
+<div class="intro-background-container @(professionalTransition) @(personalTransition)">
     <div class="professional-background">
         <StarContainer />
     </div>
@@ -27,8 +24,8 @@
     <div class="personal-background"></div>
 </div>
 
-<div class="header-container">
-    <h2 class="intro-header">Professional stuff</h2>
+<div class="header-container @(professionalTransition) @(personalTransition)">
+    <button class="intro-header btn btn-primary" onclick="@SetProfessionalClass">Professional stuff</button>
     <h2 class="intro-header text-center">hey friend, <br /> i'm brett</h2>
     <h2 class="intro-header">Personal stuff</h2>
 </div>
@@ -36,5 +33,18 @@
 
 @code
 {
+    private string professionalTransition = "";
+    private string personalTransition = "";
 
+    private void SetProfessionalClass()
+    {
+        professionalTransition = "blast-off";
+        InvokeAsync(StateHasChanged);
+    }
+
+    private void SetPersonalClass()
+    {
+        personalTransition = "personal";
+        InvokeAsync(StateHasChanged);
+    }
 }
