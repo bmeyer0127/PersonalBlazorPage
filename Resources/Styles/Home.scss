@@ -4,7 +4,7 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 
 .blast-off {
-    animation: launch 5s;
+    animation: launch 2s forwards;
 }
 
 .intro-background-container {
@@ -58,6 +58,11 @@
     height: 2rem;
     width: 2rem;
     animation: arrow-down-bounce 1s ease 0s infinite normal forwards;
+}
+
+.profession-section-after {
+    animation: profSecBringDown 2s forwards;
+    position: absolute;
 }
 
 .professional-name-gap {
@@ -183,6 +188,15 @@
         transform: translateY(0)
     }
     100% {
-        transform: translateY(100%);
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes profSecBringDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
     }
 }

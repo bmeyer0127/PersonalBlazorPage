@@ -3,10 +3,14 @@
 @rendermode InteractiveServer
 @using BirdContainer
 @using StarContainer
+@using ProfessionalSection
 @using Microsoft.AspNetCore.Mvc.TagHelpers
 
-
 <PageTitle>Ahoy</PageTitle>
+
+<div class="@(professionalSectionTransition)">
+    <ProfessionalSection />
+</div>
 
 <div class="intro-background-container @(professionalTransition) @(personalTransition)">
     <div class="professional-background">
@@ -25,7 +29,7 @@
 </div>
 
 <div class="header-container @(professionalTransition) @(personalTransition)">
-    <button class="intro-header btn btn-primary" onclick="@SetProfessionalClass">Professional stuff</button>
+    <button class="intro-header btn btn-primary" @onclick="() => SetProfessionalClass()">Professional stuff</button>
     <h2 class="intro-header text-center">hey friend, <br /> i'm brett</h2>
     <h2 class="intro-header">Personal stuff</h2>
 </div>
@@ -34,11 +38,13 @@
 @code
 {
     private string professionalTransition = "";
+    private string professionalSectionTransition = "prof-section-before";
     private string personalTransition = "";
 
     private void SetProfessionalClass()
     {
         professionalTransition = "blast-off";
+        professionalSectionTransition = "prof-section-after";
         InvokeAsync(StateHasChanged);
     }
 
