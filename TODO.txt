@@ -1,12 +1,15 @@
 ﻿#CURRENT TASK############################################################################################################
 
-- Work on the transition into space for professional stuff
+- Prettier buttons that match respective color themes
+
+# Create transition to space
+	- Make it feel a little like jumping into space. i.e. slow down and fast up
 
 - Make birds look less horrible
 
-- Think about creating a circle for the earth instead of just a section of one
-
 #TODO####################################################################################################################
+
+- Think about creating a circle for the earth instead of just a section of one
 
 - Maybe add some trees on the earth
 
