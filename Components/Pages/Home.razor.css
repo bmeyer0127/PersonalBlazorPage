@@ -68,10 +68,19 @@
   position: relative;
 }
 
-.personal-background {
-  background: linear-gradient(#968a1e, #7d8d26, #727e00, #586700);
+.personal-background-container {
   position: relative;
-  height: 100%;
+  align-items: center;
+  background: #FFD09B;
+}
+
+.personal-background {
+  align-self: center;
+  background-color: #FFD09B;
+  bottom: 0;
+  position: absolute;
+  color: #2c4120;
+  width: 100%;
 }
 
 .personal-background::after {
@@ -84,18 +93,6 @@
   height: 2rem;
   width: 2rem;
   animation: arrow-up-bounce 1s ease 0s infinite normal forwards;
-}
-
-.personal-background::before {
-  background: linear-gradient(#968a1e, #7d8d26, #727e00, #586700);
-  content: "";
-  -webkit-mask-image: url("Assets/HorizonCurve.svg");
-  -webkit-mask-repeat: no-repeat;
-  position: absolute;
-  height: 200%;
-  width: 200%;
-  bottom: -50%;
-  display: inline-block;
 }
 
 .header-container {

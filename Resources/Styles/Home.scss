@@ -74,10 +74,19 @@
     position: relative;
 }
 
-.personal-background {
-    background: $earth-gradient;
+.personal-background-container {
     position: relative;
-    height: 100%;
+    align-items: center;
+    background: $lower-sky-background;
+}
+
+.personal-background {
+    align-self: center;
+    background-color: $lower-sky-background;
+    bottom: 0;
+    position: absolute;
+    color: #2c4120;
+    width: 100%;
 }
 
 .personal-background::after {
@@ -92,17 +101,17 @@
     animation: arrow-up-bounce 1s ease 0s infinite normal forwards;
 }
 
-.personal-background::before {
-    background: $earth-gradient;
-    content: '';
-    -webkit-mask-image: url("Assets/HorizonCurve.svg");
-    -webkit-mask-repeat: no-repeat;
-    position: absolute;
-    height: 200%;
-    width: 200%;
-    bottom: -50%;
-    display: inline-block; 
-}
+//.personal-background::before {
+//    background: $earth-gradient;
+//    content: '';
+//    -webkit-mask-image: url("Assets/HorizonCurve.svg");
+//    -webkit-mask-repeat: no-repeat;
+//    position: absolute;
+//    height: 200%;
+//    width: 200%;
+//    bottom: -50%;
+//    display: inline-block; 
+//}
 
 .header-container {
     position: absolute;

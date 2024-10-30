@@ -25,7 +25,19 @@
 
     <div class="name-personal-gap" />
 
-    <div class="personal-background"></div>
+    <div class="personal-background-container">
+        <svg class="personal-background" xmlns="http://www.w3.org/2000/svg" viewBox="0 -1.5 23 1.5">
+            <path d="M0 0C7-2 16-2 23 0" fill="url(#Gradient)" />
+            <defs>
+                <linearGradient id="Gradient" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#968a1e" />
+                    <stop offset="33%" stop-color="#7d8d26" />
+                    <stop offset="66%" stop-color="#727e00" />
+                    <stop offset="100%" stop-color="#586700" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
 </div>
 
 <div class="header-container @(professionalTransition) @(personalTransition)">
