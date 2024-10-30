@@ -17,17 +17,17 @@
 }
 
 .header-container {
-  height: 100%;
-  width: 100%;
   position: absolute;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-around;
+  height: 100%;
+  width: 100%;
   z-index: 3;
 }
 
 .intro-header {
-  text-align: center;
   z-index: 1;
 }
 
@@ -55,9 +55,18 @@
   animation: arrow-down-bounce 1s ease 0s infinite normal forwards;
 }
 
-.profession-section-after {
-  animation: profSecBringDown 2s forwards;
+.prof-section-before {
+  transform: translateY(-100%);
+  width: 100%;
+  height: 100%;
   position: absolute;
+}
+
+.prof-section-after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: profSecBringDown 2s forwards;
 }
 
 .professional-name-gap {
@@ -101,6 +110,12 @@
   height: 200%;
   width: 200%;
   bottom: -50%;
+  display: inline-block;
+}
+
+.prof-btn {
+  border: 2px solid red;
+  position: relative;
   display: inline-block;
 }
 
@@ -173,10 +188,10 @@
 }
 @keyframes profSecBringDown {
   0% {
-    transform: translateY(0);
+    transform: translateY(-100%);
   }
   100% {
-    transform: translateY(-100%);
+    transform: translateY(0%);
   }
 }
 
