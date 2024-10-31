@@ -1,7 +1,12 @@
+* {
+  overflow: clip;
+}
+
 html, body {
   background-color: #ECDFCC;
   color: black;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Gowun Dodum", sans-serif;
+  font-weight: bolder;
   overflow: hidden;
 }
 

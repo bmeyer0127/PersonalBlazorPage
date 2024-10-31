@@ -3,10 +3,15 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
+* {
+    overflow: clip;
+}
+
 html, body {
     background-color: $page-background-color;
     color: $primary-font-color;
     font-family: $primary-font-stack;
+    font-weight: bolder;
     overflow: hidden;
 }
 
