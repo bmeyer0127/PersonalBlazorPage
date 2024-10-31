@@ -53,7 +53,6 @@
 }
 
 .prof-section-after {
-    //transform: translateY(5px);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -62,6 +61,7 @@
 
 .professional-name-gap {
     background: linear-gradient($space-background, $sky-background);
+    position: relative;
 }
 
 .name-background {
@@ -74,34 +74,31 @@
     position: relative;
 }
 
-.personal-background {
-    background: $earth-gradient;
+.personal-background-container {
     position: relative;
-    height: 100%;
+    align-items: center;
+    background: $lower-sky-background;
 }
 
-.personal-background::after {
+.personal-background {
+    align-self: center;
+    background-color: $lower-sky-background;
+    bottom: 0;
+    position: absolute;
+    color: #2c4120;
+    width: 100%;
+}
+
+.personal-background-container::after {
     content: '';
     -webkit-mask-image: url("Assets/ArrowDown.svg");
     -webkit-mask-repeat: no-repeat;
     transform: rotate(180deg);
-    background-color: white;
+    background-color: black;
     margin-left: 1rem;
     height: 2rem;
     width: 2rem;
     animation: arrow-up-bounce 1s ease 0s infinite normal forwards;
-}
-
-.personal-background::before {
-    background: $earth-gradient;
-    content: '';
-    -webkit-mask-image: url("Assets/HorizonCurve.svg");
-    -webkit-mask-repeat: no-repeat;
-    position: absolute;
-    height: 200%;
-    width: 200%;
-    bottom: -50%;
-    display: inline-block; 
 }
 
 .header-container {
@@ -119,7 +116,34 @@
     z-index: 1;
 }
 
+.name {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.letter-b {
+    animation: letter-bounce 1s ease 0s infinite normal forwards;
+}
+
+.letter-r {
+    animation: letter-bounce 1s ease .1s infinite normal forwards;
+}
+
+.letter-e {
+    animation: letter-bounce 1s ease .2s infinite normal forwards;
+}
+
+.letter-first-t {
+    animation: letter-bounce 1s ease .3s infinite normal forwards;
+}
+
+.letter-second-t {
+    animation: letter-bounce 1s ease .4s infinite normal forwards;
+}
+
 .prof-btn {
+    font-family: $primary-font-stack;
     border: 1px solid $space-accent;
     color: $space-accent;
     position: relative;
@@ -205,9 +229,37 @@
     }
 }
 
+@keyframes letter-bounce {
+    0% {
+        animation-timing-function: ease-in;
+        transform: translateY(0px);
+    }
+
+    10% {
+        animation-timing-function: ease-in;
+        transform: translateY(-5px);
+    }
+
+    20% {
+        animation-timing-function: ease-out;
+        transform: translateY(0px);
+    }
+
+    100% {
+        animation-timing-function: ease-out;
+        transform: translateY(0px);
+    }
+}
+
 @keyframes launch {
     0% {
         transform: translateY(0)
+    }
+    20% {
+        transform: translateY(-10vh)
+    }
+    30% {
+        transform: translateY(-10vh)
     }
     100% {
         transform: translateY(100vh);

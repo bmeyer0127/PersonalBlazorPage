@@ -2,8 +2,7 @@
 
 - Prettier buttons that match respective color themes
 
-# Create transition to space
-	- Make it feel a little like jumping into space. i.e. slow down and fast up
+
 
 - Make birds look less horrible
 
@@ -51,3 +50,6 @@
 
 # Top needs a after psudo element to create a gradient between space and sky
 # Bottom needs a before psudo element to create a gradient between sky and earth
+
+# Create transition to space
+	# Make it feel a little like jumping into space. i.e. slow down and fast up
