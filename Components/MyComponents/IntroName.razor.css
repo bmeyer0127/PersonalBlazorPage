@@ -1,0 +1,38 @@
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-40%);
+  }
+}
+.intro-message-background {
+  height: 15rem;
+  width: 150%;
+  inset: 0;
+  position: absolute;
+  transform-origin: bottom left;
+  z-index: -1;
+}
+
+.intro-message-background::after {
+  content: "";
+  height: 1.5rem;
+  width: 150%;
+  bottom: -1px;
+  position: absolute;
+  transform-origin: center;
+  -webkit-mask-image: url("/Assets/InverseWaveHalf.svg");
+  animation: wave 2s linear 0s infinite;
+}
+
+@media (max-width: 767.98px) {
+  .intro-message-background {
+    height: 10rem;
+  }
+  .intro-message-background::after {
+    animation: wave linear 2s infinite;
+  }
+}
+
+/*# sourceMappingURL=MyNameCorner.razor.css.map */

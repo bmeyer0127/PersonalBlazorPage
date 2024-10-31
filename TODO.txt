@@ -1,0 +1,55 @@
+﻿#CURRENT TASK############################################################################################################
+
+- Prettier buttons that match respective color themes
+
+
+
+- Make birds look less horrible
+
+#TODO####################################################################################################################
+
+- Think about creating a circle for the earth instead of just a section of one
+
+- Maybe add some trees on the earth
+
+- Add a flourish to my name
+
+- Make it feel awake and alive. 
+
+- Transition to space(professional) will zoom out to show orbitting earth
+- Transition to earth(personal) will either:
+	- Dive into earth to show subterranian layers OR
+	- Zoom into earth to show maybe a forest or something.
+
+#FINISHED################################################################################################################
+
+ # Add some twinkling stars to the space section.
+	# Add a fading animation
+
+# Add birds in the sky
+
+ # Add bouncing icons to display the ability to interact with the page.
+
+# Would like to finalize the basic color scheme for intro
+	# Or at least find a comfy and close enough place holder
+	# Need to find a better color for earth. 
+		# I think I want it to be a curved divide. 
+		# Will have some SVGs to make it look like a horizon.
+
+# Add a curved svg to the psudo element
+
+# Add flexbox to home intro section
+
+# Separate home page into three sections:
+	# Top: space looking aesthetic but not too stupid looking
+		# Option to click on "space" to see professional qualifications
+	# Center: name section maybe with a sky aesthetic
+		# Will probably add some cute easter eggs a-la Stardew Valley
+	# Bottom: earthy aesthetic
+		# Option to click on "earth" to see personal qualities
+
+# Top needs a after psudo element to create a gradient between space and sky
+# Bottom needs a before psudo element to create a gradient between sky and earth
+
+# Create transition to space
+	# Make it feel a little like jumping into space. i.e. slow down and fast up

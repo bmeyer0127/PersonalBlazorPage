@@ -1,0 +1,25 @@
+﻿@namespace Bird
+@rendermode InteractiveServer
+
+@* <div class="bird @(checkIfVisible(isVisible))" > *@
+    <svg class="bird @(checkIfVisible(isVisible))" xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 6 5">
+        <path d="M0 0C0 2 2 4 3 5 4 4 6 2 6 0 5 2 4 2 3 4 2 2 1 2 0 0" fill="#000000" />
+    </svg>
+@* </div> *@
+
+@code {
+    [Parameter]
+    public bool isVisible { get; set; }
+
+    private string checkIfVisible(bool isVisible)
+    {
+        if (isVisible)
+        {
+            return "visible";
+        }
+        else
+        {
+            return "invisible";
+        }
+    }
+}

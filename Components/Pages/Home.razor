@@ -1,9 +1,77 @@
 ﻿@page "/"
+@namespace Home
+@rendermode InteractiveServer
+@using BirdContainer
+@using StarContainer
+@using ProfessionalSection
+@using Microsoft.AspNetCore.Mvc.TagHelpers
 
-<PageTitle>To Whom It May Concern</PageTitle>
+<PageTitle>Ahoy</PageTitle>
 
-<div class="name-block position-absolute"></div>
+<div class="@(professionalSectionTransition)">
+    <ProfessionalSection />
+</div>
+
+<div class="intro-background-container @(professionalTransition) @(personalTransition)">
+    <div class="professional-background">
+        <StarContainer />
+    </div>
+
+    <div class="professional-name-gap">
+        <StarContainer />
+    </div>
+
+    <div class="name-background">
+        <BirdContainer />
+    </div>
+
+    <div class="name-personal-gap" />
+
+    <div class="personal-background-container">
+        <svg class="personal-background" xmlns="http://www.w3.org/2000/svg" viewBox="0 -1.5 23 1.5">
+            <path d="M0 0C7-2 16-2 23 0" fill="url(#Gradient)" />
+            <defs>
+                <linearGradient id="Gradient" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#968a1e" />
+                    <stop offset="33%" stop-color="#7d8d26" />
+                    <stop offset="66%" stop-color="#727e00" />
+                    <stop offset="100%" stop-color="#586700" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+</div>
+
+<div class="header-container @(professionalTransition) @(personalTransition)">
+    <button class="intro-header btn prof-btn" @onclick="() => SetProfessionalClass()">Professional stuff</button>
+    <h2 class="intro-header text-center">
+        hey friend, <br />
+            <span class="name">
+                <span>i'm&nbsp</span>
+                <span class="letter-b">b</span><span class="letter-r">r</span><span class="letter-e">e</span><span class="letter-first-t">t</span><span class="letter-second-t">t</span>
+            </span>
+    </h2>
+
+    <h2 class="intro-header">Personal stuff</h2>
+</div>
+
+
 @code
 {
+    private string professionalTransition = "";
+    private string professionalSectionTransition = "prof-section-before";
+    private string personalTransition = "";
 
+    private void SetProfessionalClass()
+    {
+        professionalTransition = "blast-off";
+        professionalSectionTransition = "prof-section-after";
+        InvokeAsync(StateHasChanged);
+    }
+
+    private void SetPersonalClass()
+    {
+        personalTransition = "personal";
+        InvokeAsync(StateHasChanged);
+    }
 }

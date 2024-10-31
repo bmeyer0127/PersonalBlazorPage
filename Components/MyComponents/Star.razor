@@ -1,0 +1,42 @@
+﻿@namespace Star
+@rendermode InteractiveServer
+
+<div class="star @(currentStyle)">
+    <svg xmlns="http://www.w3.org/2000/svg" width="2" height="2" fill="currentColor" stroke="currentColor" viewBox="4 1 2 2">
+        <path d="M 4 2 L 5 1 L 6 2 L 5 3 L 4 2" fill="#000000" />
+    </svg>
+</div>
+
+@code {
+    private static Random random = new Random();
+    private string? currentStyle;
+
+    protected override void OnInitialized()
+    {
+        currentStyle = setStyle();
+        System.Timers.Timer timer = new System.Timers.Timer();
+        timer.Elapsed += new System.Timers.ElapsedEventHandler(UpdateStyle);
+        timer.Interval = 3000;
+        timer.Enabled = true;
+    }
+
+    private void UpdateStyle(object? sender, System.Timers.ElapsedEventArgs e)
+    {
+        currentStyle = setStyle();
+        InvokeAsync(StateHasChanged);
+    }
+
+    private string? setStyle()
+    {
+        if (random.Next(6) == 5)
+        {
+            return "fade-in-and-out";
+        }
+        else
+        {
+            return "invisible";
+        }
+    }
+
+
+}

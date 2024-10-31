@@ -1,0 +1,27 @@
+.bird-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-content: center;
+  animation: bird-migration 10s infinite linear;
+}
+
+.bird-row {
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 0 !important;
+}
+
+@keyframes bird-migration {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/*# sourceMappingURL=BirdContainer.razor.css.map */

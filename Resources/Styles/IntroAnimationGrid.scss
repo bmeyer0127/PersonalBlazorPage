@@ -1,0 +1,44 @@
+@import 'variables';
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+@keyframes unrotate {
+    0% {
+        transform: rotate(-25deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.animation-grid-container {
+    border: solid 2px red;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.ag-long-rectangle {
+    height: auto;
+    width: 20rem;
+    //animation: unrotate linear 5s;
+    transform: rotate(-25deg);
+    transform-origin: bottom left;
+}
+
+//@include media-breakpoint-up(sm) {
+//    .ag-long-rectangle {
+//        width: 30rem;
+//    }
+//}
+
+@include media-breakpoint-up(md) {
+    .animation-grid-container {
+        margin-top: 3rem;
+    }
+
+    //.ag-long-rectangle {
+    //    width: 40rem;
+    //}
+}

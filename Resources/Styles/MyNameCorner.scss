@@ -1,0 +1,47 @@
+@import 'variables';
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-40%);
+    }
+}
+
+.intro-message-background {
+    height: 15rem;
+    width: 150%;
+    //background-color: $intro-message-green;
+    inset: 0;
+    position: absolute;
+    //transform: $intro-skew;
+    transform-origin: bottom left;
+    z-index: -1;
+}
+
+.intro-message-background::after {
+    content: "";
+    height: $wave-height;
+    width: 150%;
+    //background: $page-background-color;
+    bottom: -1px;
+    position: absolute;
+    transform-origin: center;
+    -webkit-mask-image: url("/Assets/InverseWaveHalf.svg");
+    animation: wave 2s linear 0s infinite;
+}
+
+@include media-breakpoint-down(md) {
+    .intro-message-background {
+        height: 10rem;
+    }
+
+    .intro-message-background::after {
+        animation: wave linear 2s infinite;
+    }
+}
