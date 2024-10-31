@@ -1,22 +1,17 @@
 ﻿#CURRENT TASK############################################################################################################
 
-- Prettier buttons that match respective color themes
 
-
-
-- Make birds look less horrible
 
 #TODO####################################################################################################################
+
+- Prettier buttons that match respective color themes
+
+- Make birds look less horrible
 
 - Think about creating a circle for the earth instead of just a section of one
 
 - Maybe add some trees on the earth
 
-- Add a flourish to my name
-
-- Make it feel awake and alive. 
-
-- Transition to space(professional) will zoom out to show orbitting earth
 - Transition to earth(personal) will either:
 	- Dive into earth to show subterranian layers OR
 	- Zoom into earth to show maybe a forest or something.
@@ -53,3 +48,7 @@
 
 # Create transition to space
 	# Make it feel a little like jumping into space. i.e. slow down and fast up
+
+# Add a flourish to my name
+
+# Make it feel awake and alive. 
