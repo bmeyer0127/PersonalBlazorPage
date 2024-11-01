@@ -1,6 +1,13 @@
 ﻿#CURRENT TASK############################################################################################################
 
-
+- Format Professional section like a bit more of a casual resume
+	- Three sections with quick statement and will be expandable
+		- Education
+		- Experience
+		- Skills
+	- Maybe make the clickable parts of this in the shape of constellations? 
+		- Experiment with this idea
+	- 
 
 #TODO####################################################################################################################
 
