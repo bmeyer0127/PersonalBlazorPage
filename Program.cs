@@ -1,10 +1,12 @@
 using PersonalBlazorPage.Components;
+using PersonalBlazorPage.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+builder.Services.AddSingleton<TransitionState>();
 
 var app = builder.Build();
 

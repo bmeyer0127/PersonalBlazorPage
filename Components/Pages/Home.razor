@@ -1,18 +1,20 @@
 ﻿@page "/"
 @namespace Home
 @rendermode InteractiveServer
+@inject TransitionState transitionState
 @using BirdContainer
 @using StarContainer
 @using ProfessionalSection
+@using PersonalBlazorPage.Services
 @using Microsoft.AspNetCore.Mvc.TagHelpers
 
 <PageTitle>Ahoy</PageTitle>
 
-<div class="@(professionalSectionTransition)">
+<div class="@(transitionState.professionalSectionTransition)">
     <ProfessionalSection />
 </div>
 
-<div class="intro-background-container @(professionalTransition) @(personalTransition)">
+<div class="intro-background-container @(transitionState.professionalTransition) @(transitionState.personalTransition)">
     <div class="professional-background">
         <StarContainer />
     </div>
@@ -42,8 +44,8 @@
     </div>
 </div>
 
-<div class="header-container @(professionalTransition) @(personalTransition)">
-    <button class="intro-header btn prof-btn" @onclick="() => SetProfessionalClass()">Professional stuff</button>
+<div class="header-container @(transitionState.professionalTransition) @(transitionState.personalTransition)">
+    <button class="intro-header btn prof-btn" @onclick="() => {transitionState.SetProfessionalUp(); InvokeAsync(StateHasChanged);}">Professional stuff</button>
     <h2 class="intro-header text-center">
         hey friend, <br />
             <span class="name">
@@ -58,20 +60,22 @@
 
 @code
 {
-    private string professionalTransition = "";
-    private string professionalSectionTransition = "prof-section-before";
-    private string personalTransition = "";
+    // public static string professionalTransition = "";
+    // public static string professionalSectionTransition = "prof-section-before";
+    // private static string personalTransition = "";
 
-    private void SetProfessionalClass()
-    {
-        professionalTransition = "blast-off";
-        professionalSectionTransition = "prof-section-after";
-        InvokeAsync(StateHasChanged);
-    }
+    // private void SetProfessionalUp()
+    // {
+    //     Transitions.professionalTransition = "blast-off";
+    //     Transitions.professionalSectionTransition = "prof-section-after";
+    //     InvokeAsync(StateHasChanged);
+    // }
+
+
 
     private void SetPersonalClass()
     {
-        personalTransition = "personal";
+        transitionState.personalTransition = "personal";
         InvokeAsync(StateHasChanged);
     }
 }

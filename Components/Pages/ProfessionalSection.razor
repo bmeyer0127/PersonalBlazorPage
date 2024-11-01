@@ -1,11 +1,21 @@
 ﻿@namespace ProfessionalSection
+@rendermode InteractiveServer
+@inject TransitionState transitionState
 @using StarContainer
+@using PersonalBlazorPage.Services
+@using Microsoft.AspNetCore.Mvc.TagHelpers
 
 <div class="professional-container">
     <StarContainer />
-    <h2>hey</h2>
+    <button class="btn btn-primary reentry-btn" @onclick="() => {transitionState.SetProfessionalDown();}">Ground Yourself</button>
 </div>
 
 @code {
+    // public void SetProfessionalDown()
+    // {
+    //     Transitions.professionalTransition = "";
+    //     Transitions.professionalSectionTransition = "prof-section-before";
+    //     InvokeAsync(StateHasChanged);
+    // }
 
 }
