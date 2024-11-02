@@ -10,7 +10,6 @@
         {
             professionalTransition = "blast-off";
             professionalSectionTransition = "prof-section-after";
-
         }
 
         public void SetProfessionalDown()
