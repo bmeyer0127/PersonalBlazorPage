@@ -7,15 +7,10 @@
 
 <div class="professional-container">
     <StarContainer />
-    <button class="btn btn-primary reentry-btn" @onclick="() => {transitionState.SetProfessionalDown();}">Ground Yourself</button>
+    <button class="btn btn-primary reentry-btn" @onclick="() => {transitionState.SetProfessionalDown(); StateHasChanged();}">Ground Yourself</button>
+    <button class="btn btn-primary reentry-btn" @onclick="() => Console.WriteLine(transitionState.professionalSectionTransition)">ahoy</button>
 </div>
 
 @code {
-    // public void SetProfessionalDown()
-    // {
-    //     Transitions.professionalTransition = "";
-    //     Transitions.professionalSectionTransition = "prof-section-before";
-    //     InvokeAsync(StateHasChanged);
-    // }
 
 }
