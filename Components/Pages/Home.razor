@@ -55,6 +55,7 @@
     </h2>
 
     <h2 class="intro-header">Personal stuff</h2>
+    <button class="btn btn-primary reentry-btn" @onclick="() => Console.WriteLine(test())">ahoy</button>
 </div>
 
 
@@ -64,5 +65,10 @@
     {
         transitionState.personalTransition = "personal";
         InvokeAsync(StateHasChanged);
+    }
+
+    private string test()
+    {
+        return ($"professionalSectionTransition: {transitionState.professionalSectionTransition}\n professionalTransition: {transitionState.professionalTransition}");
     }
 }
