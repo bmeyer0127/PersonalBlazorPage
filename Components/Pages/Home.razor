@@ -1,4 +1,4 @@
-﻿@page "/"
+﻿@* @page "/" *@
 @namespace Home
 @rendermode InteractiveServer
 @inject TransitionState transitionState
@@ -8,13 +8,13 @@
 @using PersonalBlazorPage.Services
 @using Microsoft.AspNetCore.Mvc.TagHelpers
 
-<PageTitle>Ahoy</PageTitle>
+@* <PageTitle>Ahoy</PageTitle> *@
 
-<div class="@(transitionState.professionalSectionTransition)">
+@* <div class="@(transitionState.professionalSectionTransition)">
     <ProfessionalSection />
-</div>
+</div> *@
 
-<div class="intro-background-container @(transitionState.professionalTransition) @(transitionState.personalTransition)">
+<div class="intro-background-container @(homeClasses)">
     <div class="professional-background">
         <StarContainer />
     </div>
@@ -44,8 +44,8 @@
     </div>
 </div>
 
-<div class="header-container @(transitionState.professionalTransition) @(transitionState.personalTransition)">
-    <button class="intro-header btn prof-btn" @onclick="() => {transitionState.SetProfessionalUp(); InvokeAsync(StateHasChanged);}">Professional stuff</button>
+<div class="header-container @(homeClasses)">
+    <button class="intro-header btn prof-btn" @onclick="() => {Main.SetProfessionalUp(); InvokeAsync(StateHasChanged);}">Professional stuff</button>
     <h2 class="intro-header text-center">
         hey friend, <br />
             <span class="name">
@@ -71,4 +71,7 @@
     {
         return ($"professionalSectionTransition: {transitionState.professionalSectionTransition}\n professionalTransition: {transitionState.professionalTransition}");
     }
+
+    [Parameter]
+    public string? homeClasses { get; set; }
 }

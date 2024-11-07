@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../Resources/Styles/ProfessionalSection.scss","../../Resources/Styles/_variables.scss"],"names":[],"mappings":"AAKA;EACI,YCDe;EDEf;EACA;EACA;EACA;EACA;;;AAGJ;EACI","file":"ProfessionalSection.razor.css"}
+{"version":3,"sourceRoot":"","sources":["../../Resources/Styles/ProfessionalSection.scss","../../Resources/Styles/_variables.scss"],"names":[],"mappings":"AAKA;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;;;AAGJ;EACI,YCfe;EDgBf;EACA;EACA;EACA;EACA;;;AAGJ;EACI","file":"ProfessionalSection.razor.css"}

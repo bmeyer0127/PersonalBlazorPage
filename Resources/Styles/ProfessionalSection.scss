@@ -3,6 +3,20 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
+.prof-section-before {
+    transform: translateY(-100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.prof-section-after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: profSecBringDown 2s forwards;
+}
+
 .professional-container {
     background: $space-background;
     display: flex;

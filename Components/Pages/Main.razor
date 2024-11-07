@@ -1,0 +1,22 @@
+﻿@page "/"
+@namespace Main
+@using Home
+@using ProfessionalSection
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+
+<PageTitle>Ahoy</PageTitle>
+
+<ProfessionalSection professionalSectionClasses="@professionalSectionClasses" />
+<Home homeClasses="@homeClasses" />
+
+@code {
+    private string professionalSectionClasses = "prof-section-before ";
+    private string homeClasses = "";
+
+    public void SetProfessionalUp()
+    {
+        homeClasses = "blast-off";
+        professionalSectionClasses = "prof-section-after";
+        InvokeAsync(StateHasChanged);
+    }
+}
