@@ -1,4 +1,4 @@
-﻿@* @page "/" *@
+﻿@page "/"
 @namespace Home
 @rendermode InteractiveServer
 @inject TransitionState transitionState
@@ -45,7 +45,7 @@
 </div>
 
 <div class="header-container @(homeClasses)">
-    <button class="intro-header btn prof-btn" @onclick="() => {Main.SetProfessionalUp(); InvokeAsync(StateHasChanged);}">Professional stuff</button>
+    <button class="intro-header btn prof-btn" @onclick="() => {SetProfessionalUp();}">Professional stuff</button>
     <h2 class="intro-header text-center">
         hey friend, <br />
             <span class="name">
@@ -61,6 +61,8 @@
 
 @code
 {
+    private string professionalSectionClasses = "prof-section-before ";
+
     private void SetPersonalClass()
     {
         transitionState.personalTransition = "personal";
@@ -70,6 +72,14 @@
     private string test()
     {
         return ($"professionalSectionTransition: {transitionState.professionalSectionTransition}\n professionalTransition: {transitionState.professionalTransition}");
+    }
+
+
+    public void SetProfessionalUp()
+    {
+        homeClasses = "blast-off";
+        professionalSectionClasses = "prof-section-after";
+        InvokeAsync(StateHasChanged);
     }
 
     [Parameter]
