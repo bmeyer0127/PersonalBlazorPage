@@ -1,5 +1,9 @@
-.blast-off {
+.blast-up {
   animation: launch 2s forwards;
+}
+
+.blast-down {
+  animation: profSecBringDown 2s forwards;
 }
 
 .intro-background-container {
@@ -241,9 +245,23 @@
     transform: translateY(100vh);
   }
 }
+@keyframes fall {
+  0% {
+    transform: translateY(100vh);
+  }
+  20% {
+    transform: translateY(110vh);
+  }
+  30% {
+    transform: translateY(110vh);
+  }
+  100% {
+    transform: translateY(0vh);
+  }
+}
 @keyframes profSecBringDown {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(100%);
   }
   100% {
     transform: translateY(0%);
