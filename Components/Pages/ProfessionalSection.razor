@@ -5,10 +5,31 @@
 @using PersonalBlazorPage.Services
 @using Microsoft.AspNetCore.Mvc.TagHelpers
 
-<div class="">
-    <div class=" @(professionalSectionClasses)">
-        <StarContainer />
-        <button class="btn btn-primary reentry-btn" @onclick="async () => { SetProfessionalDownClasses(); await SetProfessionalDown.InvokeAsync(); }">Ground Yourself</button>
+<div class="@(professionalSectionClasses)">
+    <StarContainer />
+    <div class="prof-content-container container">
+        <div class="prof-intro-container">
+            <h2>Intro</h2>
+        </div>
+        <div class="prof-body-container">
+            <div class="prof-body-left">
+                <h2>body left</h2>
+            </div>
+            <div class="prof-body-center">
+                <h2>body center</h2>
+            </div>
+            <div class="prof-body-right">
+                <h2>body center</h2>
+            </div>
+        </div>
+        <button class="btn btn-outline-primary reentry-btn"
+                @onclick="async () => 
+            { 
+                SetProfessionalDownClasses(); 
+                await SetProfessionalDown.InvokeAsync(); 
+            }">
+            Ground Yourself
+        </button>
     </div>
 </div>
 

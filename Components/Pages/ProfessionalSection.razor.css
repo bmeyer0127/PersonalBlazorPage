@@ -13,16 +13,62 @@
   animation: profSecBringDown 2s forwards;
 }
 
-.professional-container {
-  background: #124076;
+.prof-content-container {
   display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
+  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
-  z-index: 3;
+}
+
+.prof-intro-container {
+  display: flex;
+  position: absolute;
+  color: #848fa5;
+  margin: 2rem;
+}
+
+.prof-body-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  align-self: center;
+  color: #848fa5;
+  width: 100%;
+}
+
+.prof-body-left {
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+}
+
+.prof-body-center {
+  position: absolute;
+  justify-self: center;
+}
+
+.prof-body-right {
+  position: absolute;
+  justify-content: flex-end;
 }
 
 .reentry-btn {
-  position: relative;
+  display: flex;
+  position: absolute;
+  align-self: end;
+  color: #848fa5;
+  border-color: #848fa5;
+  margin: 2rem;
+}
+
+.reentry-btn:hover {
+  background-color: #124076;
+  color: #edca4a;
+  border-color: #edca4a;
 }
 
 /*# sourceMappingURL=ProfessionalSection.razor.css.map */

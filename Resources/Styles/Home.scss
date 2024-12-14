@@ -4,11 +4,15 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 
 .blast-up {
-    animation: launch 2s forwards;
+    // Quick animation for dev purposes
+    animation: launch .5s forwards;
+    //animation: launch 2s forwards;
 }
 
 .blast-down {
-    animation: profSecBringDown 2s forwards;
+    // Quick animation for dev purposes
+    animation: profSecBringDown .5s forwards;
+    //animation: profSecBringDown 2s forwards;
 }
 
 .intro-background-container {
