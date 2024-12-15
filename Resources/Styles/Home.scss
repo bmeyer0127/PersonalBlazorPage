@@ -185,6 +185,17 @@
     }
 }
 
+.personal-btn {
+    font-family: $primary-font-stack;
+    border-color: $earth-text;
+    color: $earth-text;
+}
+
+.personal-btn:hover {
+    background-color: $earth-text;
+    color: $page-background-color;
+}
+
 // Animations
 
 @keyframes arrow-up-bounce {

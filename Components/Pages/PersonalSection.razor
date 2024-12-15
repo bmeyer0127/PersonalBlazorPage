@@ -1,0 +1,39 @@
+﻿@namespace PersonalSection
+@rendermode InteractiveServer
+@using PersonalBlazorPage.Services
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+
+<div class="personal-section-container container">
+    <button class="btn btn-outline-primary resurface-button" 
+            @onclick="async() => 
+                {
+                    SetPersonalDownClasses();
+                    await SetPersonalDown.InvokeAsync();
+                }">
+            Resurface</button>
+    <div class="personal-intro-container">
+        <h2>Center</h2>
+    </div>
+    <div class="personal-body-container">
+        <div class="personal-body-left">
+            <h2>Body Left</h2>
+        </div>
+        <div class="personal-body-center">
+            <h2>Body Center</h2>
+        </div>
+        <div class="personal-body-right">
+            <h2>Body Right</h2>
+        </div>
+    </div>
+
+</div>
+
+@code {
+    [Parameter] public EventCallback SetPersonalDown { get; set; }
+    [Parameter] public string? personalSectionClasses { get; set; }
+
+    private void SetPersonalDownClasses()
+    {
+        
+    }
+}

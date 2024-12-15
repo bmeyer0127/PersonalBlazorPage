@@ -173,6 +173,17 @@
     top: -10%;
   }
 }
+.personal-btn {
+  font-family: "Gowun Dodum", sans-serif;
+  border-color: #43604E;
+  color: #43604E;
+}
+
+.personal-btn:hover {
+  background-color: #43604E;
+  color: #ECDFCC;
+}
+
 @keyframes arrow-up-bounce {
   0% {
     animation-timing-function: ease-in;

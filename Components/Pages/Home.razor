@@ -10,7 +10,7 @@
 
 <PageTitle>Ahoy</PageTitle>
 
-<ProfessionalSection professionalSectionClasses="@professionalSectionClasses" SetProfessionalDown="HandleProfessionalDown"/>
+<ProfessionalSection professionalSectionClasses="@professionalSectionClasses" SetProfessionalUp="HandleProfessionalUp"/>
 
 <div class="intro-background-container @(homeClasses)">
     <div class="professional-background">
@@ -43,7 +43,7 @@
 </div>
 
 <div class="header-container @(homeClasses)">
-    <button class="intro-header btn prof-btn" @onclick="() => {SetProfessionalUp();}">Professional stuff</button>
+    <button class="intro-header btn prof-btn" @onclick="() => {SetProfessionalDown();}">Professional stuff</button>
     <h2 class="intro-header text-center">
         hey friend, <br />
             <span class="name">
@@ -53,7 +53,7 @@
     </h2>
 
     <h2 class="intro-header">Personal stuff</h2>
-    <button class="btn btn-primary reentry-btn">ahoy</button>
+    <button class="btn btn-outline-primary personal-btn">Dig Down</button>
 </div>
 
 
@@ -61,7 +61,6 @@
 {
     [Parameter] public string? homeClasses { get; set; }
     public string professionalSectionClasses = "prof-section-before ";
-    public string starHide = "";
 
     public void SetPersonalClass()
     {
@@ -69,19 +68,22 @@
         StateHasChanged();
     }
 
-    public void SetProfessionalUp()
+    public void SetProfessionalDown()
     {
-        starHide = "star-hide";
         homeClasses = "blast-up";
         professionalSectionClasses = "prof-section-after";
         StateHasChanged();
     }
 
-    public void HandleProfessionalDown()
+    public void HandleProfessionalUp()
     {
-        starHide = "";
         homeClasses = "blast-down";
         professionalSectionClasses = "prof-section-before prof-section-push-up";
+        StateHasChanged();
+    }
+
+    public void HandlePersonalDown()
+    {
         StateHasChanged();
     }
 }
