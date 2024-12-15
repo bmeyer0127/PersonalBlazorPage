@@ -61,6 +61,7 @@
 {
     [Parameter] public string? homeClasses { get; set; }
     public string professionalSectionClasses = "prof-section-before ";
+    public string starHide = "";
 
     public void SetPersonalClass()
     {
@@ -70,6 +71,7 @@
 
     public void SetProfessionalUp()
     {
+        starHide = "star-hide";
         homeClasses = "blast-up";
         professionalSectionClasses = "prof-section-after";
         StateHasChanged();
@@ -77,8 +79,9 @@
 
     public void HandleProfessionalDown()
     {
+        starHide = "";
         homeClasses = "blast-down";
-        professionalSectionClasses = "prof-section-before";
+        professionalSectionClasses = "prof-section-before prof-section-push-up";
         StateHasChanged();
     }
 }
