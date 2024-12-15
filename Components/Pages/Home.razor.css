@@ -1,9 +1,9 @@
 .blast-up {
-  animation: launch 0.5s forwards;
+  animation: launch 2s forwards;
 }
 
 .blast-down {
-  animation: profSecBringDown 0.5s forwards;
+  animation: profSecBringDown 2s forwards;
 }
 
 .intro-background-container {

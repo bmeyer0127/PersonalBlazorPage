@@ -35,25 +35,22 @@
   display: flex;
   flex-direction: row;
   position: absolute;
+  justify-content: space-between;
   align-self: center;
   color: #848fa5;
   width: 100%;
 }
 
 .prof-body-left {
-  display: flex;
   position: relative;
-  justify-content: flex-start;
 }
 
 .prof-body-center {
-  position: absolute;
-  justify-self: center;
+  position: relative;
 }
 
 .prof-body-right {
-  position: absolute;
-  justify-content: flex-end;
+  position: relative;
 }
 
 .reentry-btn {

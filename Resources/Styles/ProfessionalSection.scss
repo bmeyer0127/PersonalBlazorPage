@@ -5,11 +5,10 @@
 
 .prof-section-before {
     background: $space-background;
-    // Add an animation instead of just transform
-    //transform: translateY(-100%);
     width: 100%;
     height: 100%;
     position: absolute;
+    // Need animation to make more seemless
 }
 
 .prof-section-after {
@@ -42,25 +41,22 @@
     display: flex;
     flex-direction: row;
     position: absolute;
+    justify-content: space-between;
     align-self: center;
     color: $space-accent;
     width: 100%;
 }
 
 .prof-body-left{
-    display: flex;
     position: relative;
-    justify-content: flex-start;
 }
 
 .prof-body-center {
-    position: absolute;
-    justify-self: center;
+    position: relative;
 }
 
 .prof-body-right {
-    position: absolute;
-    justify-content: flex-end;
+    position: relative;
 }
 
 .reentry-btn {
