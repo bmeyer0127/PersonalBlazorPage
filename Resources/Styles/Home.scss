@@ -4,15 +4,19 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 
 .blast-up {
-    // Quick animation for dev purposes
-    //animation: launch .5s forwards;
     animation: launch 2s forwards;
 }
 
 .blast-down {
-    // Quick animation for dev purposes
-    //animation: profSecBringDown .5s forwards;
-    animation: profSecBringDown 2s forwards;
+    animation: fall 2s forwards;
+}
+
+.sink-down {
+    animation: sink 2s forwards;
+}
+
+.sink-up {
+    animation: push-up 2s forwards;
 }
 
 .intro-background-container {
@@ -276,23 +280,42 @@
 
 @keyframes launch {
     0% {
-        transform: translateY(0)
+        transform: translateY(0%)
     }
     20% {
-        transform: translateY(-10vh)
+        transform: translateY(-10%)
     }
     30% {
-        transform: translateY(-10vh)
+        transform: translateY(-10%)
     }
     100% {
-        transform: translateY(100vh);
+        transform: translateY(100%);
     }
 }
 
-@keyframes profSecBringDown {
+@keyframes fall {
     0% {
         transform: translateY(100%);
     }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes sink {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes push-up {
+    0% {
+        transform: translateY(-100%);
+    }
+
     100% {
         transform: translateY(0%);
     }

@@ -3,29 +3,31 @@
 @using PersonalBlazorPage.Services
 @using Microsoft.AspNetCore.Mvc.TagHelpers
 
-<div class="personal-section-container container">
-    <button class="btn btn-outline-primary resurface-button" 
-            @onclick="async() => 
-                {
-                    SetPersonalDownClasses();
-                    await SetPersonalDown.InvokeAsync();
-                }">
-            Resurface</button>
-    <div class="personal-intro-container">
-        <h2>Center</h2>
-    </div>
-    <div class="personal-body-container">
-        <div class="personal-body-left">
-            <h2>Body Left</h2>
+<div class="@(personalSectionClasses)">
+    <div class="personal-content-container container">
+        <button class="btn btn-outline-primary resurface-button" 
+                @onclick="async() => 
+                    {
+                        SetPersonalDownClasses();
+                        await SetPersonalDown.InvokeAsync();
+                    }">
+                Resurface</button>
+        <div class="personal-intro-container">
+            <h2>Center</h2>
         </div>
-        <div class="personal-body-center">
-            <h2>Body Center</h2>
+        <div class="personal-body-container">
+            <div class="personal-body-left">
+                <h2>Body Left</h2>
+            </div>
+            <div class="personal-body-center">
+                <h2>Body Center</h2>
+            </div>
+            <div class="personal-body-right">
+                <h2>Body Right</h2>
+            </div>
         </div>
-        <div class="personal-body-right">
-            <h2>Body Right</h2>
-        </div>
-    </div>
 
+    </div>
 </div>
 
 @code {
@@ -34,6 +36,6 @@
 
     private void SetPersonalDownClasses()
     {
-        
+        personalSectionClasses = "personal-section-before personal-section-push-down";
     }
 }

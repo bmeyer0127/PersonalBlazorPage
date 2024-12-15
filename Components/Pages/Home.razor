@@ -5,6 +5,7 @@
 @using BirdContainer
 @using StarContainer
 @using ProfessionalSection
+@using PersonalSection
 @using PersonalBlazorPage.Services
 @using Microsoft.AspNetCore.Mvc.TagHelpers
 
@@ -43,7 +44,7 @@
 </div>
 
 <div class="header-container @(homeClasses)">
-    <button class="intro-header btn prof-btn" @onclick="() => {SetProfessionalDown();}">Professional stuff</button>
+    <button class="intro-header btn prof-btn" @onclick="() => SetProfessionalDown()">Professional stuff</button>
     <h2 class="intro-header text-center">
         hey friend, <br />
             <span class="name">
@@ -53,20 +54,17 @@
     </h2>
 
     <h2 class="intro-header">Personal stuff</h2>
-    <button class="btn btn-outline-primary personal-btn">Dig Down</button>
+    <button class="btn btn-outline-primary personal-btn" @onclick="() => SetPersonalUp()">Dig Down</button>
 </div>
+
+<PersonalSection personalSectionClasses="@personalSectionClasses" SetPersonalDown="HandlePersonalDown" />
 
 
 @code
 {
     [Parameter] public string? homeClasses { get; set; }
     public string professionalSectionClasses = "prof-section-before ";
-
-    public void SetPersonalClass()
-    {
-        transitionState.personalTransition = "personal";
-        StateHasChanged();
-    }
+    public string personalSectionClasses = "personal-section-before";
 
     public void SetProfessionalDown()
     {
@@ -82,8 +80,17 @@
         StateHasChanged();
     }
 
+    public void SetPersonalUp()
+    {
+        homeClasses = "sink-down";
+        personalSectionClasses = "personal-section-after";
+        StateHasChanged();
+    }
+
     public void HandlePersonalDown()
     {
+        homeClasses = "sink-up";
+        personalSectionClasses = "personal-section-before personal-section-push-down";
         StateHasChanged();
     }
 }
