@@ -129,7 +129,14 @@
 }
 
 .intro-header {
+    width: 25%;
     z-index: 1;
+}
+
+@include media-breakpoint-down(md) {
+    .intro-header {
+        width: 50%;
+    }
 }
 
 .name {
@@ -193,6 +200,13 @@
     font-family: $primary-font-stack;
     border-color: $earth-text;
     color: $earth-text;
+    margin-bottom: 4rem;
+}
+
+@include media-breakpoint-down(md) {
+    .personal-btn {
+        margin-bottom: 0;
+    }
 }
 
 .personal-btn:hover {

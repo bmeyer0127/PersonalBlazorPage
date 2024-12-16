@@ -25,24 +25,28 @@
 
 .personal-content-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     position: relative;
     background: $earth-gradient-backwards;
     justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
 }
 
 .personal-intro-container {
-    margin-top: 3rem;
     display: flex;
     position: absolute;
+    margin-bottom: 3rem;
+    bottom: 0;
 }
 
 .personal-body-container {
     display: flex;
-    margin-top: 3rem;
+    flex-direction: row;
+    justify-content: space-between;
     position: absolute;
+    width: 100%;
 }
 
 .prof-body-left {
@@ -63,8 +67,16 @@
 .resurface-button {
     display: flex;
     position: absolute;
-    justify-content: flex-start;
+    top: 0;
     margin-top: 2rem;
+    color: $earth-accent;
+    border-color: $earth-accent;
+}
+
+.resurface-button:hover {
+    background-color: $earth-accent;
+    color: $earth-background-dark;
+    border-color: $earth-background-dark;
 }
 
 @keyframes personalSecBringUp {

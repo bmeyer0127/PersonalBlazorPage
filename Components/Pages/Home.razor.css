@@ -124,9 +124,15 @@
 }
 
 .intro-header {
+  width: 25%;
   z-index: 1;
 }
 
+@media (max-width: 767.98px) {
+  .intro-header {
+    width: 50%;
+  }
+}
 .name {
   position: relative;
   display: flex;
@@ -185,8 +191,14 @@
   font-family: "Gowun Dodum", sans-serif;
   border-color: #43604E;
   color: #43604E;
+  margin-bottom: 4rem;
 }
 
+@media (max-width: 767.98px) {
+  .personal-btn {
+    margin-bottom: 0;
+  }
+}
 .personal-btn:hover {
   background-color: #43604E;
   color: #ECDFCC;
