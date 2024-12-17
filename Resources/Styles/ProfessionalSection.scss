@@ -37,8 +37,32 @@
 .prof-intro-container {
     display: flex;
     position: absolute;
+    text-align: center;
     color: $space-accent;
     margin: 2rem;
+    width: 50%;
+}
+
+@include media-breakpoint-down(lg) {
+    .prof-intro-container {
+        width: 75%;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .prof-intro-container {
+        width: 100%;
+    }
+}
+
+.prof-text {
+    font-family: $primary-font-stack;
+    font-size: 1.5rem;
+    color: $space-accent;
+}
+
+.prof-intro-focus {
+    color: $space-subtle;
 }
 
 .prof-body-container {
@@ -47,20 +71,31 @@
     position: absolute;
     justify-content: space-between;
     align-self: center;
+    text-align: center;
     color: $space-accent;
     width: 100%;
 }
 
-.prof-body-left{
+.prof-text-container {
+    //margin: 2rem;
     position: relative;
+    width: 33%;
+}
+
+.prof-body-focus {
+    color: $space-subtle;
+}
+
+.prof-body-left{
+
 }
 
 .prof-body-center {
-    position: relative;
+
 }
 
 .prof-body-right {
-    position: relative;
+
 }
 
 .reentry-btn {

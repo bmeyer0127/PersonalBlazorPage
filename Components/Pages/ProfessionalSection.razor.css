@@ -32,8 +32,30 @@
 .prof-intro-container {
   display: flex;
   position: absolute;
+  text-align: center;
   color: #848fa5;
   margin: 2rem;
+  width: 50%;
+}
+
+@media (max-width: 991.98px) {
+  .prof-intro-container {
+    width: 75%;
+  }
+}
+@media (max-width: 767.98px) {
+  .prof-intro-container {
+    width: 100%;
+  }
+}
+.prof-text {
+  font-family: "Gowun Dodum", sans-serif;
+  font-size: 1.5rem;
+  color: #848fa5;
+}
+
+.prof-intro-focus {
+  color: #edca4a;
 }
 
 .prof-body-container {
@@ -42,20 +64,18 @@
   position: absolute;
   justify-content: space-between;
   align-self: center;
+  text-align: center;
   color: #848fa5;
   width: 100%;
 }
 
-.prof-body-left {
+.prof-text-container {
   position: relative;
+  width: 33%;
 }
 
-.prof-body-center {
-  position: relative;
-}
-
-.prof-body-right {
-  position: relative;
+.prof-body-focus {
+  color: #edca4a;
 }
 
 .reentry-btn {
