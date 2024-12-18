@@ -86,6 +86,24 @@
     color: $space-subtle;
 }
 
+.constellation {
+    //padding: 1rem;
+    color: white;
+    overflow: visible !important;
+    width: 75%;
+}
+
+.contellation-left {
+
+}
+
+.contellation-center {
+}
+
+.contellation-right {
+    
+}
+
 .prof-body-left{
 
 }
@@ -95,7 +113,7 @@
 }
 
 .prof-body-right {
-
+    align-content: end;
 }
 
 .reentry-btn {

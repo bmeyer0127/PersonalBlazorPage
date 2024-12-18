@@ -78,6 +78,16 @@
   color: #edca4a;
 }
 
+.constellation {
+  color: white;
+  overflow: visible !important;
+  width: 75%;
+}
+
+.prof-body-right {
+  align-content: end;
+}
+
 .reentry-btn {
   display: flex;
   position: absolute;
