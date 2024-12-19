@@ -91,18 +91,18 @@
     color: white;
     overflow: visible !important;
     width: 75%;
-    stroke-width: .1px;
+    //stroke-width: .1px;
     stroke: white;
 }
 
-.contellation-left {
-
+.constellation-left {
+    transform: rotate(90deg);
 }
 
-.contellation-center {
+.constellation-center {
 }
 
-.contellation-right {
+.constellation-right {
     
 }
 
