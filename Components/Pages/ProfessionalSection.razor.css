@@ -78,6 +78,11 @@
   color: #edca4a;
 }
 
+.prof-body-container:hover > :not(:hover) {
+  filter: blur(5px);
+  opacity: 0.5;
+}
+
 .constellation {
   padding: 0.5rem;
   color: white;
@@ -88,12 +93,22 @@
   animation: constellationTwinkle 3s linear infinite;
 }
 
+.constellation:hover {
+  opacity: 1;
+  animation: none;
+  cursor: pointer;
+}
+
 .constellation-left {
   transform: rotate(90deg);
 }
 
 .constellation-center {
   transform: rotate(90deg);
+}
+
+.constellation-right {
+  transform: rotate(0.5turn);
 }
 
 .prof-body-right {
