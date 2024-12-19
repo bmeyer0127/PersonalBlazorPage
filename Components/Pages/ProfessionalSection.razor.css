@@ -84,6 +84,7 @@
   overflow: visible !important;
   width: 75%;
   stroke-width: 0.1px;
+  stroke: white;
 }
 
 .prof-body-right {
