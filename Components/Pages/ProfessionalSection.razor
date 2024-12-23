@@ -4,12 +4,13 @@
 @using StarContainer
 @using PersonalBlazorPage.Services
 @using Microsoft.AspNetCore.Mvc.TagHelpers
+@using DisplayText
 
 <div class="@(professionalSectionClasses)">
     <StarContainer />
     <div class="prof-content-container container">
         <div class="prof-intro-container">
-            <p class="prof-text">
+            @* <p class="prof-text">
                 I am a very motivated web developer with excitement that spans the field. 
                     My interests change depending on my desired objective, but lately
                     I've been focusing on 
@@ -17,7 +18,7 @@
                 <span class="prof-intro-focus">front end design</span>,
                 <span class="prof-intro-focus">JS frameworks</span>, and the
                 <span class="prof-intro-focus">Dotnet Environment</span>
-            </p>
+            </p> *@
         </div>
         <div class="prof-body-container">
             <div class="prof-body-left prof-text-container">
@@ -29,6 +30,7 @@
                         <span class="prof-body-focus">defense</span>
                         for the contrary.
                 </p> *@
+                <div class="button" type="button" data-bs-toggle="modal" data-bs-target="#LeftContellationModal">
                 <svg class="constellation constellation-left" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="557.387px" height="422.808px" version="1.1" viewBox="-263.521 663.685 278.694 211.404" fill="currentColor" stroke="currentColor">
                         <path id="STROKE_7dfc1cac-0118-4f7b-b51e-de61f27b44ab" opacity="1.000" fill="currentColor" stroke="currentColor" stroke-width="nan" stroke-opacity="nan" stroke-linecap="round" stroke-linejoin="round" d="M -192.000 832.000 L -192.000 832.000 "></path>
                         <path id="STROKE_e8c76add-07ae-437f-b2b5-c7c994f40962" opacity="1.000" fill="currentColor" stroke="currentColor" stroke-width="nan" stroke-opacity="nan" stroke-linecap="round" stroke-linejoin="round" d="M -128.000 768.000 L -128.000 768.000 "></path>
@@ -49,6 +51,8 @@
                         <path id="STROKE_9ef5839b-a756-4bd2-9d18-03bd248f1750" opacity="1.000" fill="currentColor" stroke="currentColor" stroke-width="0.517" stroke-opacity="1.000" stroke-linecap="round" stroke-linejoin="round" d="M -128.152 768.312 L -191.460 832.309 "></path>
                         <path id="STROKE_1bb6b81f-e6e4-4d15-92cf-5fe3988b7817" opacity="1.000" fill="currentColor" stroke="currentColor" stroke-width="0.517" stroke-opacity="1.000" stroke-linecap="round" stroke-linejoin="round" d="M -127.184 769.017 L 6.810 866.773 "></path>
                 </svg>
+                </div>
+                <DisplayText ModalId="LeftConstellationModal" ModalHeader="" TextToDisplay="ahoy" TextClasses="" ContainerClasses="" />
             </div>
             <div class="prof-body-center prof-text-container">
                 <svg class="constellation constellation-center" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50.990px" height="251.028px" version="1.1" viewBox="-263.223 712.884 105.495 190.514" fill="currentColor" stroke="currentColor">

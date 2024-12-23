@@ -1,0 +1,32 @@
+﻿@namespace DisplayText
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+
+<div id="@ModalId" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>@ModalHeader</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="@ContainerClasses">
+                    <p class="@TextClasses">
+                        @TextToDisplay
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@code {
+    [Parameter] public string? ModalId { get; set; }
+    [Parameter] public string? ContainerClasses { get; set; }
+    [Parameter] public string? ModalHeader { get; set; }
+    [Parameter] public string? TextClasses { get; set; }
+    [Parameter] public string? TextToDisplay { get; set; }
+
+}
