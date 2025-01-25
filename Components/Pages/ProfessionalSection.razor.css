@@ -20,42 +20,22 @@
 
 .prof-content-container {
   display: flex;
-  flex-direction: row;
-  position: relative;
   justify-content: center;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.prof-intro-container {
-  display: flex;
   position: absolute;
-  text-align: center;
-  color: #848fa5;
-  margin: 2rem;
-  width: 50%;
+  width: 100vw;
+  height: 100vh;
 }
 
-@media (max-width: 991.98px) {
-  .prof-intro-container {
-    width: 75%;
-  }
-}
-@media (max-width: 767.98px) {
-  .prof-intro-container {
-    width: 100%;
-  }
-}
 .prof-text {
   font-family: "Gowun Dodum", sans-serif;
   font-size: 1.5rem;
   color: #848fa5;
+  width: 100%;
+  height: 100%;
 }
 
-.prof-intro-focus {
-  color: #edca4a;
+.prof-text:hover {
+  cursor: pointer;
 }
 
 .prof-body-container {
@@ -67,9 +47,61 @@
   text-align: center;
   color: #848fa5;
   width: 100%;
+  z-index: 3;
 }
 
-.prof-text-container {
+.const-transition-text-container {
+  display: flex;
+  position: absolute;
+  align-content: center;
+  justify-content: center;
+  overflow: visible;
+  width: 100vw;
+  height: 100vh;
+  border: 2px solid black;
+  z-index: 4;
+}
+
+.prof-screen-wipe-bar-first {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  position: absolute;
+  height: 5%;
+  background-color: white;
+  overflow: visible;
+}
+
+.front-wipe-bar {
+  width: 100vw;
+  height: 100vh;
+  border: 2px solid red;
+  transform: rotate(180deg);
+  transform-origin: top;
+  position: absolute;
+}
+
+.behind-wipe-bar {
+  height: 100vh;
+  border: 2px solid blue;
+  position: absolute;
+}
+
+.prof-screen-wipe-bar-initial {
+  display: none;
+}
+
+.prof-screen-wipe-bar-before {
+  display: flex;
+  animation: 3s linear forwards screenWipeBack;
+}
+
+.prof-screen-wipe-bar-after {
+  display: flex;
+  animation: 3s linear forwards screenWipe;
+}
+
+.prof-const-container {
   position: relative;
   width: 33%;
 }
@@ -84,12 +116,13 @@
 }
 
 .constellation {
-  padding: 0.5rem;
-  color: white;
+  position: relative;
   overflow: visible !important;
   width: 75%;
-  stroke-width: 1px;
+  padding: 0.5rem;
+  color: white;
   stroke: white;
+  stroke-width: 1px;
   animation: constellationTwinkle 3s linear infinite;
 }
 
@@ -99,20 +132,24 @@
   cursor: pointer;
 }
 
-.constellation-left {
+.const-left-before {
   transform: rotate(90deg);
 }
 
-.constellation-center {
+.const-center-before {
   transform: rotate(90deg);
 }
 
-.constellation-right {
+.const-right-before {
   transform: rotate(0.5turn);
 }
 
-.prof-body-right {
-  align-content: end;
+.const-after {
+  display: none;
+}
+
+.const-text-before {
+  display: none;
 }
 
 .reentry-btn {
@@ -161,6 +198,22 @@
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes screenWipe {
+  0% {
+    transform: translate(-100vw, 100vh);
+  }
+  100% {
+    transform: translate(100vw, -100vh);
+  }
+}
+@keyframes screenWipeBack {
+  0% {
+    transform: translate(100vw, -100vh);
+  }
+  100% {
+    transform: translate(-100vw, 100vh);
   }
 }
 

@@ -15,6 +15,11 @@
   flex-grow: 0 !important;
 }
 
+@media (max-width: 575.98px) {
+  .bird-container {
+    animation: bird-migration 5s infinite linear;
+  }
+}
 @keyframes bird-migration {
   0% {
     transform: translateX(-25%);
